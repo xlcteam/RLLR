@@ -1,0 +1,6 @@
+site_name: RLLR
+site_url: https://example.com/
+nav:
+    - Home: index.md
+    - 01.md
+theme: readthedocs
