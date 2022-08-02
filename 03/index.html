@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://example.com/03/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Python: funkcie, range, vlastná hra - RLLR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python: funkcie, range, vlastn\u00e1 hra";
+    var mkdocs_page_input_path = "03.md";
+    var mkdocs_page_url = "/03/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> RLLR</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../01/">Úvod do Pythonu</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../02/">Python: vstup, riadiace štruktúry, zoznam</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Python: funkcie, range, vlastná hra</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#funkcie">Funkcie</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#range">range</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#labyrint">Labyrint</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">RLLR</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Python: funkcie, range, vlastná hra</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="python-funkcie-range-vlastna-hra">Python: funkcie, range, vlastná hra</h1>
+<h2 id="funkcie">Funkcie</h2>
+<p>Príkazy <code>print</code>, <code>int</code>, <code>input</code>, <code>len</code>, ..., ktoré sme používali doteraz, majú
+niečo spoločné. Pozrime sa na ne ako na stroje.</p>
+<ol>
+<li>Do stroja niečo vhodíme, spustíme ho,</li>
+<li>on niečo spraví,</li>
+<li>a nakoniec niečo vyhodí zo seba von.</li>
+</ol>
+<p>Do príkazu <code>int</code> vhodíme hodnotu, napr. <code>'10'</code>, prevedie ju na číslo a vrátí
+nám hodnotu <code>10</code>. Takýmto príkazom hovoríme <em>funkcie</em>. Funkcie majú <em>vstup</em> a
+<em>výstup</em>, niečo berú ako <em>argument</em> na vstupe a vrátia hodnotu na výstupe
+(<em>návratová hodnota</em>). Niektoré funkcie nemusia
+mať argument, napr. <code>input()</code>, naopak <code>print( 'a', 4, 10 )</code> má viac argumentov
+(jednotlivé argumenty oddeľujeme čiarkou), ale zase žiadnu návratovú hodnotu.</p>
+<hr />
+<p>To, že <code>print</code> nemá návratovú hodnotu nie je tak úplne pravda:</p>
+<pre><code class="language-python">&gt;&gt;&gt; r = print( 'test' )
+test
+&gt;&gt;&gt; r
+&gt;&gt;&gt; print( r )
+None
+&gt;&gt;&gt; type( r )
+&lt;class 'NoneType'&gt;
+</code></pre>
+<p>Návratová hodnota je <code>None</code>. Je to jediná možná hodnota dátového typu
+<code>NoneType</code>. Uvádzam to len pre zaujímavosť, pre nás to teraz vôbec nie je
+dôležité.</p>
+<hr />
+<p>Dobrá správa je: Python umožňuje vytvoriť si vlastné funkcie! Slúži na to
+príkaz <code>def</code>, znovu na konci obsahuje dvojbodku a nasleduje blok kódu (<em>telo
+funckie</em>) odsadený vpravo, ktorý sa vykoná, ak túto funkciu <em>zavoláme</em> (to
+znamená, použijeme ju v programe).</p>
+<pre><code class="language-python">def say_hi( who ):
+    print( 'Hi', who )
+
+say_hi( 'robot' )
+say_hi( 'Adam' )
+</code></pre>
+<p>Prvý riadok sa nazýva <em>hlavička funkcie</em>. Určuje názov funkcie a <em>parametry</em>.
+Medzi parametrom a argumentom je veľmi slabý rozdiel a často sa ich význam
+zamieňa. Ak chceme byť presný, <code>'robot'</code> a <code>'Adam'</code> sú argumenty. <code>who</code> je
+parameter. Ako <strong>a</strong>uto zaparkuje na <strong>p</strong>arkovisko, tak aj <strong>a</strong>rgument
+zaparkuje na <strong>p</strong>arameter, takže hodnota <code>'robot'</code> (argument) sa uloží do
+premennej <code>who</code> (parameter). Ešte inak: ak sa pozeráme zvnútra funkcie, vidíme
+parametre. Ak sa pozeráme zvonka, vidíme argumenty.</p>
+<hr />
+<p><strong>Úloha 1</strong></p>
+<p>Napíšte funkciu <code>print_max</code>, ktorá vypíše maximálny prvok v zozname. Ak je
+zoznam prázdny, vypíše túto informáciu. Napr:</p>
+<pre><code class="language-text">print_max( [ 3, 9, 0 ] ) vypíše: 9
+print_max( [] ) vypíše: Max element does not exist (the list is empty)
+print_max( 'dkrn' ) vypíše: r
+</code></pre>
+<p><strong>Úloha 2</strong></p>
+<p>Pokúste sa v definícii funkcie "print_max" použiť funkciu <code>max</code> (ktorá je už
+vstavaná v Pythone). Krátka ukážka ako funguje:</p>
+<pre><code class="language-python">&gt;&gt;&gt; max( [ 1, 2, 0 ] )
+2
+&gt;&gt;&gt; max( 'dkrn' )
+'r'
+&gt;&gt;&gt; max( [] )
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+  ValueError: max() arg is an empty sequence
+</code></pre>
+<p>Takže pozor na to, aby argumentom nebol prázdny zoznam, toto bude treba
+otestovať ešte pred tým, ako sa zavolá funkcia <code>max</code>.</p>
+<hr />
+<p>Čo ak by sme chceli aj my niečo vrátiť z našej vlastnej funkcie, nielen
+vypisovať? Slúži na to slovíčko <code>return</code>:</p>
+<pre><code class="language-python">def area( a, b ):
+    return a * b
+
+print( area( 2, 3 ) )
+print( area( 0, 10 ) + area( 10, 0 ) )
+print( area( 1, area( 2, 3 ) ) ) # well, this is &quot;volume&quot;
+</code></pre>
+<p>Prvý riadok (po definícii funkcie <code>area</code>) zavolá <code>area( 2, 3 )</code>. Do premennej
+<code>a</code> sa uloží hodnota <code>2</code>, do <code>b</code> hodnota <code>3</code>. Potom sa vyhodnotí <code>a * b</code> na
+hodnotu <code>12</code>, ktorá sa vráti spať a vykoná sa <code>print( 12 )</code>. Podobne si vieme
+rozobrať aj posledný riadok:</p>
+<ol>
+<li><code>print( area( 1, area( 2, 3 ) ) )</code></li>
+<li><code>print( area( 1, 6 ) )</code></li>
+<li><code>print( 6 )</code></li>
+<li>Na obrazovke uvidíme text "6"</li>
+</ol>
+<hr />
+<p><strong>Úloha</strong></p>
+<p>Napíšte funkciu, ktorá vráti počet kladných čísel v zozname.</p>
+<pre><code class="language-text">[] -&gt; 0
+[ 2, 3 ] -&gt; 2
+[ 0, 4, 9, -2, 10 ] -&gt; 3
+[ -2, 0, -5 ] -&gt; 0
+</code></pre>
+<hr />
+<h2 id="range">range</h2>
+<p>Ukážeme si jednu novú, užitočnú funkciu, hlavne v spojení s <code>for ... in</code>
+cyklom. Volá sa <code>range</code> a môže brať jeden, dva, alebo aj tri argumenty. Vráti
+špeciálnu hodnotu typu 'range', ktorú ale vieme konvertovať do zoznamu pomocou
+funkcie <code>list</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; list( range( 10 ) )
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&gt;&gt;&gt; list( range( 0 ) )
+[]
+&gt;&gt;&gt; list( range( 1 ) )
+[0]
+&gt;&gt;&gt; list( range( 0, 10 ) )
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&gt;&gt;&gt; list( range( 0, 0 ) )
+[]
+&gt;&gt;&gt; list( range( 3, 5 ) )
+[3, 4]
+&gt;&gt;&gt; list( range( -3, 3 ) )
+[-3, -2, -1, 0, 1, 2]
+&gt;&gt;&gt; list( range( -3, 3, 2 ) )
+[-3, -1, 1]
+&gt;&gt;&gt; list( range( 0, 10, 1 ) )
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&gt;&gt;&gt; list( range( 0, 10, 3 ) )
+[0, 3, 6, 9]
+&gt;&gt;&gt; list( range( 10, 0, -3 ) )
+[10, 7, 4, 1]
+</code></pre>
+<p><code>range(a, b, c)</code> vygeneruje čísla od <code>a</code> (vrátane) do <code>b</code> (vynímajúc) s
+rozdielmi <code>c</code> medzi každými dvomi číslami. Ak použijeme iba dva argumenty, <code>c</code>
+sa nastaví automaticky na jednotku. A ak iba jeden, <code>a</code> sa nastaví na nulu.</p>
+<p>Ak ale použijeme túto funkciu s konštrukciou <code>for ... in</code>, môžme vynechať
+konvertovanie cez <code>list</code>, lebo vie pracovať aj s špeciálnou hodnotou typu
+'range', akú vracia funkcia <code>range</code>.</p>
+<pre><code class="language-python">&gt;&gt;&gt; type( range( 5 ) )
+&lt;class 'range'&gt;
+&gt;&gt;&gt; for i in range( 5 ):
+...     print( i )
+...
+0
+1
+2
+3
+4
+</code></pre>
+<p><code>for</code> spolu s <code>range</code> častokrát dokáže nahradiť cyklus <code>while</code> a lepšie sa s
+ním pracuje. Ak si spomenieme napr. na náš program kresliaci trojuholníky,
+teraz by sme samotné kreslenie (načítanie veľkosti na vstupe zostáva rovnako)
+vedeli napísať nasledovne:</p>
+<pre><code class="language-python">for row_size in range( size, 0, -1 ):
+    print( row_size * '*' )
+</code></pre>
+<p>A nakresliť opačný trojuholník (so špičkou na vrchu) by bolo podobne jednoduché:</p>
+<pre><code class="language-python">for row_size in range( 1, size + 1 ):
+    print( row_size * '*' )
+</code></pre>
+<hr />
+<p><strong>Úloha</strong></p>
+<p>Napíšte program, ktorý sa spýta užívateľa na dve čísla. Tie budú znamenať
+veľkosť strán obdĺžnika. Potom pomocou <code>for ... in range</code> vykreslite takýto
+obdĺžnik. Pre veľkosti 4 a 6 by mal vyzerať takto:</p>
+<pre><code class="language-text">######
+#    #
+#    #
+######
+</code></pre>
+<hr />
+<h2 id="labyrint">Labyrint</h2>
+<p>Poďme si spolu naprogramovať jednoduchú hru. Už máme nejaké skusenosti s
+programovaním, takže pokým sa trochu obmedzíme v našich nárokoch na kvalitu,
+zvládneme to ľavou zadnou.</p>
+<p>Cieľom hry bude dostať sa v labyrinte do cieľa. Labyrint budeme kresliť podobne
+ako v poslednej úlohe, mriežky (#) budú označovať steny, medzery ( ) voľné
+políčka. Cieľ označíme ako písmeno X a našu postavičku O. V každom kole vyzveme
+používateľa aby zadal jedno z písmenok:</p>
+<ul>
+<li>w - krok hore</li>
+<li>a - krok vľavo</li>
+<li>s - krok dole</li>
+<li>d - krok vpravo</li>
+<li>q - ukončiť hru</li>
+</ul>
+<p>Na začiatku si zadefinujeme všetky tieto <em>konštanty</em>, teda premenné, ktoré sa
+nebudú meniť. V Pythone je zvykom písať ich názvy veľkými písmenami.</p>
+<pre><code class="language-python">FIELD = [
+'#############',
+'#  #  ### #X#',
+'# #       # #',
+'# ## ## # # #',
+'#     # #   #',
+'##### #  #  #',
+'#   # #######',
+'# #         #',
+'#############' ]
+
+HEIGHT = len( FIELD )
+WIDTH = len( FIELD[ 0 ] )
+
+END = 'X'
+PLAYER = 'O'
+WALL = '#'
+
+UP = 'w'
+LEFT = 'a'
+DOWN = 's'
+RIGHT = 'd'
+QUIT = 'q'
+</code></pre>
+<p>Hracie pole si ukladáme ako zoznam textových reťazcov - riadkov. Výška poľa je
+počet riadkov, ktorý vieme zistiť funkciou <code>len</code>. Tiež ju použijeme na zistenie
+šírky, t.j. počet stĺpcov, ktorý sa rovná dĺžke každého (a teda napr. prvého)
+riadku. Na začiatku hráča umiestnime do ľavého dolného rohu. Pamätajme, že
+indexy začínajú nulou.  X-ová súradnica je horizontálna (zľava doprava), y-ová
+je vertikálna (zhora dolu).</p>
+<pre><code class="language-python">INITIAL_X = 1
+INITIAL_Y = 7
+</code></pre>
+<p>Teraz si napíšeme funkciu, ktorá vykreslí hracie pole aj s hráčom. Funkcia bude
+mať dva parametre: aktuálne súradnice hráča. Budeme prechádzať pomocou
+vnoreného <code>for</code> cyklu celé hracie pole po riadkoch, ak na danom políčku stojí
+hráč, vykreslíme jeho znak, inak vykreslíme políčko z hracieho pola. Doteraz
+sme <code>print</code> používali tak, že na konci výstupu vždy vložil znak konca riadku
+(akoby stlačil na konci riadku Enter). To je jeho prednastavené správanie.
+Teraz ale nechceme aby bolo každé políčko na svojom vlastnom riadku, chceme ich
+vykresliť hneď vedľa seba. Preto použijeme špeciálny (<em>optional</em>) parameter
+<code>end</code>, kde mu nastavíme znak, ktorý má vykresliť na konci výstupu. Skúste si
+v shelli spustiť napr. <code>print( 'afad', end='###' )</code>. My naozaj nechceme vypísať
+medzi políčkami nič, preto nastavíme tento parameter na prázdny text.</p>
+<pre><code class="language-python">def print_field( player_x, player_y ):
+    for y in range( HEIGHT ):
+        for x in range( WIDTH ):
+            if y == player_y and x == player_x:
+                print( PLAYER, end='' )
+            else:
+                print( FIELD[ y ][ x ], end='' )
+        print()
+</code></pre>
+<p>Napíšeme si ešte jednu dôležitú funkciu. Bude načítavať vstup od užívateľa a
+posúvať hráča. Ako vstup zoberie tiež súradnice hráča a vráti 3 hodnoty: nové
+súradnice po posune a logickú hodnotu, či sa má hra ukončiť. Viac ako jednu
+hodnotu sme doteraz nevrátili v žiadnej funkcii, ale je to jednoduché:</p>
+<pre><code class="language-python">def is_valid_command( command ):
+    return command in 'wasdq'
+
+def is_empty( x, y ):
+    return not FIELD[ y ][ x ] == WALL
+
+def move( player_x, player_y ):
+    new_player_x = player_x
+    new_player_y = player_y
+
+    while True:
+        command = input( 'Move &quot;w&quot;, &quot;a&quot;, &quot;s&quot;, &quot;d&quot; or end &quot;q&quot;: ' )
+        if not is_valid_command( command ):
+            print( 'Invalid command' )
+        else:
+            if command == 'w':
+                new_player_y -= 1
+            elif command == 'a':
+                new_player_x -= 1
+            elif command == 's':
+                new_player_y += 1
+            elif command == 'd':
+                new_player_x += 1
+            else: # quit
+                return player_x, player_y, True
+
+            if is_empty( new_player_x, new_player_y ):
+                return new_player_x, new_player_y, False
+            else:
+                print( 'You cannot move there' )
+                new_player_x = player_x
+                new_player_y = player_y
+</code></pre>
+<p>Teraz implementujeme hlavnú logiku. Načítať viacero hodnôt z funkcie je rovnako
+jednoduché.</p>
+<pre><code class="language-python">x = INITIAL_X
+y = INITIAL_Y
+
+end = False
+
+while not end:
+    print_field( x, y )
+    x, y, end = move( x, y )
+    if not end and FIELD[ y ][ x ] == END:
+        print( 'Congratulation!' )
+        end = True
+
+print( 'The game ends' )
+</code></pre>
+<p>Tak, a hra je hotová :) Nezabudnite, že príkaz <code>input</code> vždy čaká na stlačenie
+klávesy "Enter", takže sa hra nedá ovládať plynule ako sme zvyknutí, len
+držaním "w" "a" "s" "d". To by sme mohli ešte vylepšiť, no najbližšie si už
+postavíme svojho prvého robota a rozpohybujeme ho Pythonom! Zároveň
+si postupne budeme ukazovať všeliaké nové užitočné príkazy.</p>
+<p><img alt="Python IDLE" src="../img/L3_robot.png" /></p>
+<hr />
+<p><strong>Úloha</strong></p>
+<p>Ak ešte máte chuť trochu popracovať na našej hre, tu je niekoľko návrhov:</p>
+<ol>
+<li>Vytvorte viacero rôznych bludísk, nechajte hráča, aby si z nich vybral.</li>
+<li>Pridajte počítadlo krokov. Čím viac krokov hráč spraví pokým sa dostane
+   do cieľa, tým nižšie bude jeho skóre, ktoré na konci hra vypíše.</li>
+<li>Do bludiska pridajte diamanty (napr. znak bodky "."), tie bude hráč zbierať,
+   takže po prejdení políčka s diamantom, diamant na ňom už nesmie zostať!
+   Pozbierané diamanty hráčovi zvyšujú skóre.</li>
+<li>Do hry môžete pridať dvere "D" a kľúč "K". Keď hráč zoberie kľúč, dvere sa
+   mu otvoria a bude môcť prejsť do cieľa.</li>
+</ol>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../02/" class="btn btn-neutral" title="Python: vstup, riadiace štruktúry, zoznam"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

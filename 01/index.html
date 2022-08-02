@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://example.com/01/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Úvod do Pythonu - RLLR</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u00davod do Pythonu";
+    var mkdocs_page_input_path = "01.md";
+    var mkdocs_page_url = "/01/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> RLLR</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Úvod do Pythonu</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#python-ako-kalkulacka">Python ako kalkulačka</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#modulo">Modulo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mocnina">Mocnina</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#premenne">Premenné</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tlacit">Tlačiť!</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nas-prvy-program">Náš prvý program</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#preco-si-to-nezopakovat">Prečo si to nezopakovať?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#logicke-ano-a-nie">Logické áno a nie</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prikaz-while">Príkaz while</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../02/">Python: vstup, riadiace štruktúry, zoznam</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../03/">Python: funkcie, range, vlastná hra</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">RLLR</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Úvod do Pythonu</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="uvod-do-pythonu">Úvod do Pythonu</h1>
+<p><a href="https://www.python.org/">Python</a> je jeden z mnohých <em>programovacích jazykov</em>.
+Tak ako ľudia medzi sebou sa rozprávame spoločným jazykom, potrebujeme sa
+naučiť nový jazyk, ktorému rozumie počítač či robot. Tak mu budeme vedieť
+povedať, kedy sa pohnúť, ako rýchlo, čo zobraziť na displeji, a podobne.</p>
+<p>Poďme na to!</p>
+<h2 id="python-ako-kalkulacka">Python ako kalkulačka</h2>
+<p>Spustíme program <a href="https://docs.python.org/3/library/idle.html">IDLE</a>. Otvorí sa
+okno podobné tomu na obrázku nižšie.</p>
+<p><img alt="Python IDLE" src="../img/L1_python_shell_win.png" /></p>
+<p>Tento program nám bude slúžiť na písanie <em>zdrojového kódu</em> a jeho spustenie.
+Zdrojový kód -- to sú príkazy, ktoré napíšeme počítaču. On si potom tento kód
+prečíta riadok za riadkom a vykoná ich. Hovoríme tiež, že ich <em>interpretuje</em>. V
+okne, ktoré sa nám otvorilo, môžeme zadávať jednotlivé príkazy. Na poslednom
+riadku vidíme tzv. <em>prompt</em>: <code>&gt;&gt;&gt;</code>. Označuje, že program je pripravený počúvať
+na naše príkazy. Dokáže napr. fungovať ako kalkulačka, stačí hneď za prompt
+napísať jednoduchý príklad a stlačiť <code>Enter</code>.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 40 + 2
+42
+&gt;&gt;&gt; 30 - 5 * 8
+-10
+</code></pre>
+<p>Znak <code>*</code> znamená násobenie. Vidíme, že Python pozná základné matematické
+pravidlá, najprv vypočítal násobenie, až potom odčítanie. Ak by sme ho predsa
+len chceli presvedčiť, aby najprv odčítal, použijeme zátvorky. Rovnako ako v
+matematike. S tým rozdielom, že musíme použiť okrúhle zátvorky <code>()</code>, tie
+ostatné (<code>[]{}</code>) majú pre Python iný význam a len by sme ho poplietli.</p>
+<pre><code class="language-python">&gt;&gt;&gt; (30 - 5) * 8
+200
+</code></pre>
+<p>Pozrime sa na delenie:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 40 / 5
+8.0
+&gt;&gt;&gt; 40 // 5
+8
+&gt;&gt;&gt; 40 / 7
+5.714285714285714
+&gt;&gt;&gt; 40 // 7
+5
+</code></pre>
+<p>V Pythone sa rozlišujú dva typy delenia:</p>
+<ol>
+<li><code>/</code> je klasické delenie ako ho poznáme,</li>
+<li><code>//</code> je <em>celočíselné delenie</em>. To znamená, že výsledkom je číslo, koľkokrát
+   najviac sa zmestí deliteľ do delenca celý. <code>7 * 5 = 35</code>, všetko je ešte v
+   poriadku, ale <code>7 * 6 = 42</code>, a to je už viac než 40, preto <code>40 // 7 = 5</code>.</li>
+</ol>
+<p>(Presnejšie, je to delenie <code>/</code> nasledované zaokrúhlením nadol)</p>
+<p>Ukážeme si ešte dve matematické špeciality.</p>
+<h3 id="modulo">Modulo</h3>
+<p>Alebo inak: zvyšok po celočíselnom delení. Je to tá časť, ktorá nám ešte chýba,
+keď použijeme celočíselné delenie <code>//</code> namiesto <code>/</code>. Pre túto operáciu sa používa znak
+<code>%</code>.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 40 % 7
+5
+&gt;&gt;&gt; 40 % 5
+0
+&gt;&gt;&gt; 40 // 7 * 7 + 40 % 7
+40
+</code></pre>
+<hr />
+<p><strong>Úloha</strong></p>
+<p>Prečo posledný príklad vyšiel práve 40? Fungovalo by to aj s inými číslami?
+Napr. s trojkou:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 3 // 7 * 7 + 3 % 7
+</code></pre>
+<p>Bude výsledok 3? Platí to pre všetky čísla?</p>
+<hr />
+<p>Na poslednom príklade sa vám možno nepozdáva, že sme nepoužli žiadne zátvorky.
+Nemuseli sme, lebo násobenie, delenie aj modulo majú rovnakú <em>prioritu</em>.
+Sčítanie a odčítanie majú od nich menšiu prioritu, takže sa vyhodnotia neskôr.
+To už vieme, keď sme toto správanie zmenili použitím zátvoriek. No a pri
+viacerých operáciach rovnakej priority za sebou, Python ich vyhodnocuje zľava
+doprava. Znovu ako v matematike.</p>
+<p>Takže tento príklad sa interpretuje akoby bol uzátvorkovaný takto:</p>
+<pre><code class="language-python">&gt;&gt;&gt; ((40 // 7) * 7) + (40 % 7)
+40
+</code></pre>
+<h3 id="mocnina">Mocnina</h3>
+<p>Pripomeňme si, že mocnina je opakované násobenie.<br />
+2<sup>3</sup> = 2 * 2 * 2 = 8</p>
+<p>V Pythone používame na umocňovanie operátor <code>**</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 2 ** 3
+8
+&gt;&gt;&gt; 4 ** 1
+4
+&gt;&gt;&gt; 1 ** 1000000000
+1
+&gt;&gt;&gt; 5 ** 0
+1
+</code></pre>
+<p>Umocňovanie má ešte väčšiu prioritu než násobenie.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 4 * 2 ** 3
+32
+&gt;&gt;&gt; (4 * 2) ** 3
+512
+</code></pre>
+<hr />
+<p><strong>Úloha</strong></p>
+<p>Aký je výsledok nasledujúcich matematických výrazov? Overte si správnu odpoveď
+využitím Python IDLE.</p>
+<ul>
+<li><code>- 5 + 8</code></li>
+<li><code>- (5 + 8)</code></li>
+<li><code>2 % 4 - 1</code></li>
+<li><code>10 // 3 ** 2</code></li>
+<li><code>5 / -3</code></li>
+<li><code>5 // -3 * 3 + 5 % -3</code></li>
+</ul>
+<hr />
+<h3 id="premenne">Premenné</h3>
+<p>Pri zložitejších výpočtoch si často chceme uložiť medzivýsledok. Moderné
+kalkulačky to zvládnu a Python IDLE tiež!</p>
+<pre><code class="language-python">&gt;&gt;&gt; x = 4 + 8
+&gt;&gt;&gt; x
+12
+&gt;&gt;&gt; 2 * x
+24
+</code></pre>
+<p>Príkaz <code>x = 4 + 8</code> znamená priradenie hodnoty na pravej strane (<code>4 + 8</code>) do
+<em>premennej</em> na ľavej strane (<code>x</code>). Najprv Python vypočíta <code>4 + 8</code>. Potom si na
+miesto v pamäti, kde má uložený výsledok, nalepí poznámku "x". Je to názov
+novej premennej, aby si pamätal kam sa má pozrieť, keď ju uvidí v našich
+príkazoch nabudúce.  Napr. <code>2 * x</code> -&gt; <code>2 * 12</code> -&gt; <code>24</code>.</p>
+<p><img alt="premenná" src="../img/L1_x.png" /></p>
+<p>Názvy môžu byť aj viacpísmenkové, môžu obsahovať veľké aj malé znaky, tiež
+cifry (ale cifra nemôže stáť na začiatku mena) a podtržítko ("_").</p>
+<p>Čo sa stane ak budeme chcieť ukázať hodnotu premennej, ktorú Python ešte
+nepozná?</p>
+<pre><code class="language-python">&gt;&gt;&gt; y
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name 'y' is not defined
+</code></pre>
+<p>Všimnime si posledný riadok. Hovorí nám, že názov "y" nie je definovaný, inými
+slovami, nepozná ho, nevie kam sa pozrieť.</p>
+<hr />
+<p><strong>Úloha</strong></p>
+<p>Čo je výsledkom nasledujúcej postupnosti príkazov?</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = 3
+&gt;&gt;&gt; b = 2
+&gt;&gt;&gt; a = a + b
+&gt;&gt;&gt; b = a - b
+&gt;&gt;&gt; a = a - b
+&gt;&gt;&gt; a
+?
+&gt;&gt;&gt; b
+?
+</code></pre>
+<hr />
+<p>Aby sme si skratili zápis, namiesto</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = a + b
+</code></pre>
+<p>môžme používať</p>
+<pre><code class="language-python">&gt;&gt;&gt; a += b
+</code></pre>
+<p>Význam je ten istý. Rovnako existuje <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>//=</code>, <code>%=</code>, <code>**=</code>.
+Vyskúšajte si použiť niektoré z nich.</p>
+<h2 id="tlacit">Tlačiť!</h2>
+<p>V tejto časti si ukážeme nový príkaz. Volá sa "print". Z angličtiny vieme
+odhadnúť, na čo bude slúžiť. Vypíše text na obrazovku. Zatiaľ sme pracovali len
+s číslami, ešte nie z textom. V Pythone sa text píše medzi úvodzovky (").
+Pozor, ak napíšeme text bez úvodzoviek, interpretuje sa to ako názov, ktorý
+bude Python hľadať a pravdepodobne dostaneme podobnú sťažnosť ako naposledy
+(hovorí sa im <em>chybové hlášky</em>).</p>
+<pre><code class="language-python">&gt;&gt;&gt; print( &quot;Ahoj&quot; )
+Ahoj
+&gt;&gt;&gt; print( Ahoj )
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name 'Ahoj' is not defined
+</code></pre>
+<p>Namiesto dvojitých úvodzoviek sa dajú použiť aj jednoduché (').</p>
+<pre><code class="language-python">&gt;&gt;&gt; print( 'Cau' )
+Cau
+</code></pre>
+<p>Text síce nie je číslo, ale v Pythone dokážeme text sčítavať a dokonca aj
+násobiť!</p>
+<pre><code class="language-python">&gt;&gt;&gt; print( 'Ahoj ' + 'Robo' + 'Lab' )
+Ahoj RoboLab
+&gt;&gt;&gt; print( 'tra' + 'la' * 3 )
+tralalala
+&gt;&gt;&gt; print( 3 + ' jablka' )
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+</code></pre>
+<p>Sčítať text a číslo sa už nedá. To presne nám povie chybová hláška na poslednom
+riadku: operátor <code>+</code> nefunguje s číslom (ang. <strong>int</strong>eger) a textom (ang.
+character <strong>str</strong>ing). Ak potrebujeme vypísať v jednom príkaze text a zároveň
+aj číslo, môžme ich oddeliť čiarkou. Python medzi ne automaticky vloží medzeru.</p>
+<pre><code class="language-python">&gt;&gt;&gt; pocet = 3
+&gt;&gt;&gt; print( pocet )
+3
+&gt;&gt;&gt; print( 'Mam', pocet, 'jablka' )
+Mam 3 jablka
+</code></pre>
+<p>Takže <code>print</code> funguje aj s číslami, nielen textom! Pozor, môže sa zdať, že
+nasledujúce riadky spravia to isté, ale nie je to celkom tak. Za chvíľu si o
+tom povieme viac.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 3
+3
+&gt;&gt;&gt; print( 3 )
+3
+</code></pre>
+<h2 id="nas-prvy-program">Náš prvý program</h2>
+<p>Python IDLE obsahuje dve časti. Jednu z nich, <em>príkazový riadok</em> (tiež
+<em>shell</em>), sme používali doteraz. Slúži na vykonávanie jednotlivých príkazov,
+ale naše programy v budúcnosti budú omnoho dlhšie, pozostávajúc z niekoľko
+desiatok, aj stoviek riadkov. Tu nám pomôže druhá časť: <em>editor</em>. Otvoríme ho
+cez "File" -&gt; "New". Napíšme doň náš prvý program:</p>
+<pre><code class="language-python">print( 'Ahoj', 'RoboLab' )
+print( 'RoboLab zdravi' )
+</code></pre>
+<p>Používame to, čo sme sa už naučili, ale tentokrát nepíšeme naše príkazy do
+príkazového riadku a nevykonajú sa hneď. Keď chceme spustiť program, stlačíme
+kláves "F5". IDLE nás vyzve aby sme si program uložili a potom ho spustí v okne
+príkazového riadku. Mali by sme zbadať vypísané:</p>
+<pre><code class="language-text">Ahoj RoboLab
+RoboLab zdravi
+</code></pre>
+<p>Vráťme sa teraz k problému vypisovania čísel. Keď spustíme jednoduchý program,</p>
+<pre><code class="language-python">print( 3 * 5 )
+</code></pre>
+<p>na výstupe sa nám zobrazí <code>15</code>. Skúste si to! Správne, Python najprv vypočíta
+"3 * 5 = 15" a následne výsledok príkazom <code>print</code> vypíše na obrazovku. Skúsme
+teraz spustiť program bez príkazu <code>print</code>.</p>
+<pre><code class="language-python">3 * 5
+</code></pre>
+<p>Na výstupe sa nám nič nezobrazí! Prečo? Python znovu vyhodnotí "3 * 5 = 15",
+ale tento <strong>výsledok</strong> sa stratí, nemá žiadny príkaz, aby ho vypísal.
+Príkazový riadok nám vždy aj ukáže <strong>výsledok</strong> toho, čo mu zadáme.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 3 * 5
+15
+</code></pre>
+<p>Ale ak chceme niečo vypísať z <strong>programu</strong>, vždy musíme použiť príkaz <code>print</code>!</p>
+<p>(V ukážkach na týchto stránkach odlíšime príkazový riadok jednoducho:
+začína tromi väčšítkami <code>&gt;&gt;&gt;</code>. Ak tam nie sú, znamená to, že daná ukážka je
+<strong>program</strong>, a teda ho treba napísať do editoru.)</p>
+<h2 id="preco-si-to-nezopakovat">Prečo si to nezopakovať?</h2>
+<p>Doteraz bol Python celkom nudný. Keď sme chceli, aby nám niečo napísal, museli
+sme mu to sami napísať a ešte k tomu naviac dopísať "print". Na čo nám je taký
+Python? Ukážme si teda, že je silnejší, než sa zdá. Spustite si tento program.
+Predposledné dva riadky začínajú štyrmi medzerami a namiesto štyroch stlačení
+medzerníka môžeme použiť kláves "tabulátor".</p>
+<pre><code class="language-python">i = 0
+while i &lt; 3:
+    print( 'tra' + 'la' * i )
+    i += 1
+print( 'koniec' )
+</code></pre>
+<p>Zdá sa, že sme použili nový príkaz: <code>while</code>. Aby sme mu porozumeli, musíme si
+najprv povedať niečo o ne/pravdách v Pythone.</p>
+<h3 id="logicke-ano-a-nie">Logické áno a nie</h3>
+<p>Presuňme sa nachvíľu znovu do príkazového riadku. Pracovali sme už s textovými
+a číselnými hodnotami, teraz si ukážeme logické hodnoty (ang. <em>boolean</em> podľa
+matematika <a href="https://sk.wikipedia.org/wiki/George_Boole">Georgea Boolea</a>).
+Existujú len dve: <code>True</code> (pravda) a <code>False</code> (nepravda). V počítačoch je všetko
+jasné, buď to je jednoducho pravdivé alebo nie je.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 1 &lt; 2
+True
+&gt;&gt;&gt; 3 &lt; -5
+False
+&gt;&gt;&gt; 2 == 2
+True
+&gt;&gt;&gt; 2 &gt;= 1
+True
+&gt;&gt;&gt; 2 &gt;= 2
+True
+</code></pre>
+<p>Máme celkovo 6 <em>porovnávacích operátorov</em>:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Operátor</th>
+<th align="left">Význam</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>==</code></td>
+<td align="left">rovná sa</td>
+</tr>
+<tr>
+<td align="center"><code>!=</code></td>
+<td align="left">nerovná sa</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="left">menšie než</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;=</code></td>
+<td align="left">menšie, nanajvýš rovné</td>
+</tr>
+<tr>
+<td align="center"><code>&gt;</code></td>
+<td align="left">väčšie než</td>
+</tr>
+<tr>
+<td align="center"><code>&gt;=</code></td>
+<td align="left">väčšie, nanajvýš rovné</td>
+</tr>
+</tbody>
+</table>
+<p><strong>POZOR:</strong> Ak chceme porovnávať, používame <code>==</code> (dva znaky "="), ale ak
+priraďujeme hodnotu do premennej, používame len <code>=</code> (jeden znak "=").</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = 1
+&gt;&gt;&gt; a == 1
+True
+</code></pre>
+<p>Porovnávať nemusíme len čísla:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 'text' != 'text'
+False
+&gt;&gt;&gt; 2 == 'text'
+False
+&gt;&gt;&gt; 2 == '2'
+False
+&gt;&gt;&gt; 2 &lt; 'text'
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: '&lt;' not supported between instances of 'int' and 'str'
+&gt;&gt;&gt; 'text' &lt; 'text'
+False
+&gt;&gt;&gt; 'a' &lt; 'b'
+True
+&gt;&gt;&gt; 'a' &lt; 'aa'
+True
+&gt;&gt;&gt; 'ab' &lt;= 'aa'
+False
+</code></pre>
+<p>Textové reťazce sa porovnávajú <em>lexikograficky</em>. To znamená, ak nejaké slovo
+nájdeme v abecednom zozname skôr než nejaké druhé slovo, tak to prvé bude
+menšie. Číslo sa nikdy nebude rovnať žiadnemu textu a dokonca na menšie/vačšie
+sa ani nemôžeme spýtať.</p>
+<pre><code class="language-python">&gt;&gt;&gt; False == False
+True
+&gt;&gt;&gt; False == 0
+True
+&gt;&gt;&gt; True == 1
+True
+&gt;&gt;&gt; False &lt; True
+True
+</code></pre>
+<p>Logické hodnoty sa správajú ako čísla, pričom <code>False</code> je nula a <code>True</code>
+jednotka.</p>
+<pre><code class="language-python">&gt;&gt;&gt; True + True
+2
+&gt;&gt;&gt; True * False
+0
+</code></pre>
+<hr />
+<p>V Pythone má každá premenná (a každá hodnota) nejaký typ (<em>dátový typ</em>).
+Dokážeme ho zistiť pomocou príkazu <code>type</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; type( 3 )
+&lt;class 'int'&gt;
+&gt;&gt;&gt; type( 'text' )
+&lt;class 'str'&gt;
+&gt;&gt;&gt; type( True )
+&lt;class 'bool'&gt;
+&gt;&gt;&gt; a = False
+&gt;&gt;&gt; type( a )
+&lt;class 'bool'&gt;
+</code></pre>
+<p>S presným významom slovíčka <code>class</code> si zatiaľ nebudeme lámať hlavu, stačí si
+zapamätať, že každá hodnota má nejaký jednoznačný typ.</p>
+<hr />
+<h3 id="prikaz-while">Príkaz <code>while</code></h3>
+<p>Teraz už budeme vedieť použiť príkaz <code>while</code> (nazýva sa tiež <em>cyklus</em>):</p>
+<pre><code class="language-python">while &quot;podmienka&quot;:
+    &quot;príkaz 1&quot;
+    &quot;príkaz 2&quot;
+    ...
+&quot;príkaz 3&quot;
+...
+</code></pre>
+<p>"while" znamená po anglicky "pokým". A tak mu Python aj rozumie. Pokým je
+"podmienka" pravdivá, teda <code>True</code>, tak bude postupne vykonávať "príkaz 1",
+"príkaz 2", ..., všetko, čo je odsadené o štyri medzery vpravo (týmto príkazom
+hovoríme <em>telo cyklu</em>). Keď príde na koniec, znovu sa spýta, či je "podmienka"
+pravdivá, ak áno, vykoná znovu telo cyklu. A tak stále dokola. Keď už
+"podmienka" pravdivá nebude, Python skočí na "príkaz 3" a pokračuje ďalej.</p>
+<p>Vyskúšajme si spraviť nekonečný cyklus. Napíšeme takýto jednoduchý program:</p>
+<pre><code class="language-python">while 1 == 1:
+    print( 'ahoj' )
+</code></pre>
+<p>Spustíme, a keďže <code>1 == 1</code> sa vždy vyhodnotí na <code>True</code>, tak máme celú obrazovku
+"ahoj"ov. Program môžme zastaviť klávesovou kombináciou Ctrl+C. Rovnako by sme
+mohli napísať:</p>
+<pre><code class="language-python">while True:
+    print( 'ahoj' )
+</code></pre>
+<hr />
+<p><strong>Úloha</strong></p>
+<p>Čo vypíše nasledujúci program?</p>
+<pre><code class="language-python">while False:
+    print( 'ahoj' )
+print( 'koniec' )
+</code></pre>
+<p>Najprv skúste na to prísť sami, odpoveď si potom overte spustením.</p>
+<hr />
+<p>Vieme už dosť na to, aby sme si napísali trochu zaujímavejší program. Budeme
+"kresliť" trojuholníky z hviezdičiek (*). Od teraz budeme písať zdrojový kód
+po anglicky. Nebudú sa nám miešať slovenské a anglické slová (napr.
+<code>print( 'jablko' )</code>), a keď vytvoríme nejaký úžasný program, budeme sa môcť oň
+podeliť s celým svetom!</p>
+<p>Ako chceme aby vyzerali trojuholníky z hviezdičiek? Najmenší trojuholník
+veľkosti 1 je jednoduchý:</p>
+<pre><code class="language-text">*
+</code></pre>
+<p>Veľkosť dva:</p>
+<pre><code class="language-text">**
+*
+</code></pre>
+<p>Veľkosť 4:</p>
+<pre><code class="language-text">****
+***
+**
+*
+</code></pre>
+<p>Už máme predstavu, čo chceme naprogramovať, takže pustime sa do toho.
+Potrebujeme vedieť, aký veľký trojuholník chceme.</p>
+<pre><code class="language-python">size = 3
+</code></pre>
+<p>Vidíme, že trojuholník je nakreslený na toľko isto riadkov aká je jeho veľkosť.</p>
+<pre><code class="language-python">size = 3
+
+while size &gt; 0:
+    # print one row
+    size -= 1
+</code></pre>
+<p>Na miesto <code># print one row</code> napíšeme kód, ktorý to vykoná, zatiaľ sme si to len
+poznačili. Takáto časť v zdrojovom kóde sa nazýva <em>komentár</em>. Začína sa znakom
+"#" a pokračuje až do konca riadku. Komentáre Python ignoruje, sú to poznámky
+nás, programátorov. Ak by sme úvodný "#" nepoužili, Python by sa snažil
+interpretovať daný riadok ako príkaz a skončil by s chybovou hláškou.</p>
+<p>Pozrime sa na to, ako sme použili premennú "size" v podmienke cyklu. Na
+začiatku programu sa nastaví na hodnotu 3. Podmienka <code>size &gt; 0</code> sa vyhodnotí na
+<code>True</code> a telo cyklu sa vykoná. V ňom máme príkaz <code>size -= 1</code>. Takže teraz už
+platí "size = 2". Znovu príde na podmienku cyklu, "2 &gt; 0", a teda telo cyklu sa
+vykoná, "size" sa zníži o jedna, na hodnotu 1. Podmienka je znovu vyhodnotená
+ako <code>True</code>, "size" sa zníži na hodnotu 0. Teraz už podmienka splnená nie je a
+telo cyklu sa nezopakuje.</p>
+<p>Celkovo sa teda cyklus zopakoval 3 krát. Presne to sme chceli! Zostáva nám v
+každom opakovaní vykresliť jeden riadok. Na prvom riadku chceme mať 3
+hviezdičky. Na druhom 2 a na poslednom jednu.</p>
+<pre><code class="language-python">size = 3
+
+while size &gt; 0:
+    print( '*' * size )
+    size -= 1
+</code></pre>
+<p>Hurá a je to! Teraz stačí zmeniť v prvom riadku "size" na veľkosť akú chceme a
+Python nám vykreslí žiadaný trojuholník. Vyskúšajte si rôzne veľkosti.</p>
+<hr />
+<p><strong>Úloha 1.</strong></p>
+<p>Napíšte program podobný tomu poslednému, ktorý bude kresliť štvorce.</p>
+<p><strong>Úloha 2.</strong></p>
+<p>Napíšte program kresliaci trojuholníky, ale naopak ako doteraz. Teda, pre
+veľkosť 4 bude vyzerať:</p>
+<pre><code class="language-text">*
+**
+***
+****
+</code></pre>
+<p>Toto je už trochu ťažšia úloha, vyžaduje použiť až dve premenné. "size" sa
+tentokrát meniť nebude, ale druhá premenná bude mať postupne hodnoty od 1 až po
+"size", takže budete vedieť jednoducho vykresliť hviezdičky na každom riadku
+podľa nej. Premyslite si to dobre.</p>
+<p><strong>Úloha 3.</strong></p>
+<p>Napíšte program, ktorý vykreslí obdĺžnik. Na začiatku budú teda dve premenné:
+jedna pre veľkosť každej strany.</p>
+<p><strong>Úloha 4.</strong></p>
+<p>Pozor, toto je veľmi tvrdý oriešok! Napíšte program, tentokrát kresliaci
+pyramídu. Tu sú vzory pre veľkosti 1, 2 a 4:</p>
+<pre><code class="language-text">*
+</code></pre>
+<pre><code class="language-text"> *
+***
+</code></pre>
+<pre><code class="language-text">   *
+  ***
+ *****
+*******
+</code></pre>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../02/" class="btn btn-neutral float-right" title="Python: vstup, riadiace štruktúry, zoznam">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../02/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
