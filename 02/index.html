@@ -1,242 +1,648 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="canonical" href="https://example.com/02/">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Python: vstup, riadiace štruktúry, zoznam - RLLR</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Python: vstup, riadiace \u0161trukt\u00fary, zoznam";
-    var mkdocs_page_input_path = "02.md";
-    var mkdocs_page_url = "/02/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Python: vstup, riadiace štruktúry, zoznam - RLLR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> RLLR</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-vstup-riadiace-struktury-zoznam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../01/">Úvod do Pythonu</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Python: vstup, riadiace štruktúry, zoznam</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#nacitanie-vstupu">Načítanie vstupu</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#vylepsenie-kreslica">Vylepšenie kresliča</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#podmieneny-prikaz">Podmienený príkaz</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#elif">elif</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#logicke-operatory">Logické operátory</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#a-zaroven">A zároveň</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#alebo">Alebo</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#zapor">Zápor</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pouzitie">Použitie</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#neodbytnejsi-kreslic">Neodbytnejší kreslič</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#zoznam">Zoznam</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#priemer-cisel">Priemer čísel</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#for-in">for ... in ...</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../03/">Python: funkcie, range, vlastná hra</a>
-                    </li>
-                </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RLLR" class="md-header__button md-logo" aria-label="RLLR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RLLR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python: vstup, riadiace štruktúry, zoznam
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">RLLR</a>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RLLR" class="md-nav__button md-logo" aria-label="RLLR" data-md-component="logo">
       
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    RLLR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
     
-    <li>Python: vstup, riadiace štruktúry, zoznam</li>
-    <li class="wy-breadcrumbs-aside">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01/" class="md-nav__link">
+        Úvod do Pythonu
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python: vstup, riadiace štruktúry, zoznam
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python: vstup, riadiace štruktúry, zoznam
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nacitanie-vstupu" class="md-nav__link">
+    Načítanie vstupu
+  </a>
+  
+    <nav class="md-nav" aria-label="Načítanie vstupu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vylepsenie-kreslica" class="md-nav__link">
+    Vylepšenie kresliča
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#podmieneny-prikaz" class="md-nav__link">
+    Podmienený príkaz
+  </a>
+  
+    <nav class="md-nav" aria-label="Podmienený príkaz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    elif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logicke-operatory" class="md-nav__link">
+    Logické operátory
+  </a>
+  
+    <nav class="md-nav" aria-label="Logické operátory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-zaroven" class="md-nav__link">
+    A zároveň
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alebo" class="md-nav__link">
+    Alebo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zapor" class="md-nav__link">
+    Zápor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pouzitie" class="md-nav__link">
+    Použitie
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neodbytnejsi-kreslic" class="md-nav__link">
+    Neodbytnejší kreslič
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoznam" class="md-nav__link">
+    Zoznam
+  </a>
+  
+    <nav class="md-nav" aria-label="Zoznam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priemer-cisel" class="md-nav__link">
+    Priemer čísel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-in" class="md-nav__link">
+    for ... in ...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
-  </ul>
   
-  <hr/>
-</div>
 
-          <div role="main">
-            <div class="section">
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03/" class="md-nav__link">
+        Python: funkcie, range, vlastná hra
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
               
-                <h1 id="python-vstup-riadiace-struktury-zoznam">Python: vstup, riadiace štruktúry, zoznam</h1>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nacitanie-vstupu" class="md-nav__link">
+    Načítanie vstupu
+  </a>
+  
+    <nav class="md-nav" aria-label="Načítanie vstupu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vylepsenie-kreslica" class="md-nav__link">
+    Vylepšenie kresliča
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#podmieneny-prikaz" class="md-nav__link">
+    Podmienený príkaz
+  </a>
+  
+    <nav class="md-nav" aria-label="Podmienený príkaz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    elif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logicke-operatory" class="md-nav__link">
+    Logické operátory
+  </a>
+  
+    <nav class="md-nav" aria-label="Logické operátory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-zaroven" class="md-nav__link">
+    A zároveň
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alebo" class="md-nav__link">
+    Alebo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zapor" class="md-nav__link">
+    Zápor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pouzitie" class="md-nav__link">
+    Použitie
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neodbytnejsi-kreslic" class="md-nav__link">
+    Neodbytnejší kreslič
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zoznam" class="md-nav__link">
+    Zoznam
+  </a>
+  
+    <nav class="md-nav" aria-label="Zoznam">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priemer-cisel" class="md-nav__link">
+    Priemer čísel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-in" class="md-nav__link">
+    for ... in ...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="python-vstup-riadiace-struktury-zoznam">Python: vstup, riadiace štruktúry, zoznam</h1>
 <p>Dnes si ukážeme ako v programe aj čítať, nielen vypisovať na obrazovku, ukážeme
 si viac príkazov podobných <code>while</code>u a nový, zložitejší, dátový typ.</p>
 <h2 id="nacitanie-vstupu">Načítanie vstupu</h2>
 <p>Pripomeňme si náš program na kreslenie trojuholníkov:</p>
-<pre><code class="language-python">size = 3
-
-while size &gt; 0:
-    print( '*' * size )
-    size -= 1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">size</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">size</span> <span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
 <p>Na to, aby sme zmenili veľkosť, vždy znovu a znovu musíme prepísať náš zdrojový
 kód. Bolo by pekné, keď by sme mali len jeden program, ten spustíme a spýta sa
 nás na veľkosť, akú má použiť. Tomu sa hovorí <em>načítanie vstupu</em> a slúži na to
 príkaz <code>input</code>. Poďme si ho vyskúšať v príkazovom riadku:</p>
-<pre><code class="language-python">&gt;&gt;&gt; input()
-hello
-'hello'
-&gt;&gt;&gt; input( 'Enter Your name: ' )
-Enter Your name: robot
-'robot'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">input</span><span class="p">()</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">hello</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s1">&#39;hello&#39;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter Your name: &#39;</span> <span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">Enter</span> <span class="n">Your</span> <span class="n">name</span><span class="p">:</span> <span class="n">robot</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s1">&#39;robot&#39;</span>
+</code></pre></div>
 <p>Po zadaní príkazu <code>input()</code>, shell čaká, pokým zadáme nejaký text a stlačíme
-"Enter". Potom vypíše výsledok (rovnako ako keď sme využívali Python na rátanie
+<span class="keys"><kbd class="key-enter">Enter</kbd></span>. Potom vypíše výsledok (rovnako ako keď sme využívali Python na rátanie
 príkladov) -- výsledkom príkazu <code>input()</code> je v tomto prípade text 'hello'. Keď
 medzi zátvorky vpíšeme text, použije tento text ako prompt. Vypíše ho a znovu
 čaká na nás, aby sme mu niečo napísali. Výsledok <code>input()</code>u si môžme uložiť do
 premennej:</p>
-<pre><code class="language-python">&gt;&gt;&gt; year = input( 'Favorite year? ' )
-Favorite year? 1965
-&gt;&gt;&gt; year
-'1965'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">year</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Favorite year? &#39;</span> <span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Favorite</span> <span class="n">year</span><span class="err">?</span> <span class="mi">1965</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">year</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s1">&#39;1965&#39;</span>
+</code></pre></div>
 <h3 id="vylepsenie-kreslica">Vylepšenie kresliča</h3>
 <p>Načítanie veľkosti cez <code>input()</code> je jednoduché...</p>
-<pre><code class="language-python">size = input( 'Enter size: ' )
-
-while size &gt; 0:
-    print( '*' * size )
-    size -= 1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">size</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter size: &#39;</span> <span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">size</span> <span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
 <p>...alebo nie? Dokážete zistiť z chybovej hlášky, čo sa stalo? Pri porovnávaní
 <code>size &gt; 0</code> sa Pythonu nepáči, že porovnávame 'str' a 'int', teda text a číslo.
 Takže premenná "size" má typ 'str'. Pozrime sa na to v shelli:</p>
-<pre><code class="language-python">&gt;&gt;&gt; a = input()
-1
-&gt;&gt;&gt; type( a )
-&lt;class 'str'&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="mi">1</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="n">a</span> <span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
 <p>Naozaj, výsledkom <code>input()</code>u je text. My potrebujeme tento text konvertovať na
 číslo, na pomoc nám príde ďalší príkaz -- <code>int()</code>:</p>
-<pre><code class="language-python">&gt;&gt;&gt; int( '32' )
-32
-&gt;&gt;&gt; int( '-1' )
--1
-&gt;&gt;&gt; int( 42 )
-42
-&gt;&gt;&gt; int( '4.2' )
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-ValueError: invalid literal for int() with base 10: '4.2'
-&gt;&gt;&gt; int( 'd4' )
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-ValueError: invalid literal for int() with base 10: 'd4'
-&gt;&gt;&gt; int( 4.2 )
-4
-&gt;&gt;&gt; int( False )
-0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="s1">&#39;32&#39;</span> <span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="mi">32</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="s1">&#39;-1&#39;</span> <span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="mi">42</span> <span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="mi">42</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="s1">&#39;4.2&#39;</span> <span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;4.2&#39;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="s1">&#39;d4&#39;</span> <span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;d4&#39;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="mf">4.2</span> <span class="p">)</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="mi">4</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="kc">False</span> <span class="p">)</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="mi">0</span>
+</code></pre></div>
 <p>Tento príkaz sa snaží hociakú hodnotu previesť na celé číslo. Keď sa to nedá,
 skončí s chybou. Desatinné číslo 4.2 prevedie tak, že desatinnú časť jednoducho
 zahodí. Ale text <code>4.2</code> nevie konvertovať. Na to by sme najprv museli previesť
 text do desatinného čísla a potom do celého:</p>
-<pre><code class="language-python">&gt;&gt;&gt; int( float( '4.2' ) )
-4
-</code></pre>
-<hr />
-<p><strong>Úloha</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">float</span><span class="p">(</span> <span class="s1">&#39;4.2&#39;</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="mi">4</span>
+</code></pre></div>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Pre každý datový typ, ktorý poznáme, existuje takáto konvertovacia funkcia:
 <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>. Vyskúšajte si napr. konvertovať číslo na 'bool'
 alebo previesť číslo na text a potom zase späť na číslo.</p>
-<hr />
+</details>
 <p>Náš opravený program teda vyzerá:</p>
-<pre><code class="language-python">size = int( input( 'Enter size: ' ) )
-
-while size &gt; 0:
-    print( '*' * size )
-    size -= 1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter size: &#39;</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">size</span> <span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
 <p>Výsledok z <code>input()</code>, čo je text, vhodíme do príkazu <code>int()</code>, a dostaneme
 výsledok ako celé číslo, ktoré už môžme použiť na porovnanie, odčítanie aj
 násobenie. Problém je, ak zadáme text, ktorý sa nedá konvertovať na číslo.
 Tento problém sa dá vyriešiť, my to zatiaľ nevieme, ale nie je to také dôležité.
 Ak chce niekto používať náš program, tak má vedieť, ako písať čísla!</p>
-<hr />
-<p><strong>Úloha 1.</strong></p>
+<details class="question" open="open">
+<summary>Úloha 1</summary>
 <p>Napíšte program, ktorý sa spýta používateľa na meno a následne ho pozdraví. Beh
 programu potom môže vyzerať napríklad takto:</p>
-<pre><code class="language-text">What's Your name? Kubko
-Hello Kubko!
-</code></pre>
-<p><strong>Úloha 2.</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>What&#39;s Your name? Kubko
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Hello Kubko!
+</code></pre></div>
+</details>
+<details class="question" open="open">
+<summary>Úloha 2</summary>
 <p>Vytvorte program, ktorý si vyžiada rok narodenia a vypíše, koľkaté narodeniny
 má daný človek v súčasnom roku.</p>
-<hr />
+</details>
 <h2 id="podmieneny-prikaz">Podmienený príkaz</h2>
 <p>Jeden problém s našim kresličom trojuholníkov ale predsa len vyriešime. Keď si
 teraz niekto pustí náš program a zadá veľkosť "-3", program nič nevypíše, len
@@ -244,14 +650,14 @@ ticho skončí (overte si to). Bolo by pekné používateľa informovať o tom, 
 musí zadať nezápornú veľkosť. Potrebujeme otestovať, či platí <code>size &lt; 0</code>, na to
 využijeme podmienený príkaz <code>if</code>. Pozrime sa na nasledujúci program (spustite
 si ho):</p>
-<pre><code class="language-python">if 1 &lt; 2:
-    print( '1 &lt; 2' )
-
-if 2 &lt; 1:
-    print( 'Python is wrong' )
-else:
-    print( 'Python is right' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;1 &lt; 2&#39;</span> <span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">if</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Python is wrong&#39;</span> <span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Python is right&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Anglické slovíčko "if" znamená "ak" a "else" znamená "inak". Takže, keď si
 prečítame zdrojový kód, hneď vieme, ako tento nový príkaz (presnejšie,
 <em>riadiaca štruktúra</em>) funguje. Ak 1 je menej než 2, napíš "1 &lt; 2". Ak 2 &lt; 1,
@@ -260,75 +666,75 @@ riadku s <code>if</code> alebo <code>else</code> je vždy dvojbodka. Rovnako sme
 sme používali <code>while</code>. Označuje, že niekoľko ďalších riadkov bude odsadených o
 štyri medzeri vpravo a majú sa brať ako jeden <em>blok</em> kódu. Všimnime si rozdiel
 v týchto dvoch programoch:</p>
-<pre><code class="language-python">if False:
-    print( 'A' )
-print( 'B' )
-</code></pre>
-<pre><code class="language-python">if False:
-    print( 'A' )
-    print( 'B' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;A&#39;</span> <span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;B&#39;</span> <span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;A&#39;</span> <span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;B&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Keď ich spustíme, každý vykoná niečo iné. Python je veľmi háklivý na medzery na
 začiatku riadku. V podstate je jedno, koľko ich tam bude, ale vždy, ak má byť
 nejaký blok kódu odsadený vpravo (teda vždy za dvojbodkou), nejaká medzera tam
 musí byť a treba tento počet dodržiavať. Obydva nasledujúce programy skončia s
 chybou (skúste si ich spustiť):</p>
-<pre><code class="language-python">if False:
-print( 'A' )
-</code></pre>
-<pre><code class="language-python">if False:
- print( 'A' )
-  print( 'A' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;A&#39;</span> <span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;A&#39;</span> <span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;A&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Prvý z nich nemá blok odsadený vôbec, druhý nepoužíva počet medzier
 konzistentne. Je bežné odsadzovať bloky vždy o 4 medzery, a tak to budeme robiť
 aj my.</p>
 <h3 id="elif">elif</h3>
 <p>K príkazom <code>if</code>, <code>else</code>, ešte existuje tretí kamarát: <code>elif</code>. Znamená niečo ako
 "inak, ak ...". Ukážeme si jeho použitie, z ktorého to bude najlepšie vidieť.</p>
-<pre><code class="language-python">grade = input()
-
-if grade == 'A':
-    print( 'Excellent!' )
-elif grade == 'B':
-    print( 'Good' )
-elif grade == 'C':
-    print( 'Not bad' )
-elif grade == 'D':
-    print( 'You could do better' )
-else:
-    print( 'I know only four grades: A, B, C, D' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">if</span> <span class="n">grade</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Excellent!&#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">elif</span> <span class="n">grade</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Good&#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="k">elif</span> <span class="n">grade</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Not bad&#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="k">elif</span> <span class="n">grade</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;You could do better&#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;I know only four grades: A, B, C, D&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Python najprv otestuje, či používateľ zadal písmeno "A", ak nie, otestuje "B",
 atď., ak nie ani "D", vykoná posledný blok kódu.</p>
-<hr />
-<p><strong>Úloha</strong></p>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Skúste ešte vylepšiť kresliča tak, že ak užívateľ zadá záporné číslo, napíše
 mu, že musí zadať kladné (alebo nulu). Ak zadá väčšie číslo než 10, vypíše
 správu otom, že je to príliš veľa a mal by požiadať o menšiu veľkosť. Ak ani
 jeden z týchto scenárov sa nestane, tak potom program vykreslí trojuholník.</p>
 <p>Použite na to príkazy <code>if</code>, <code>elif</code> a <code>else</code>. Malá rada: odsadený môže (dokonca
 musí) byť aj už odsadený kód. Napríklad nasledujúci zdrojový kód je validný:</p>
-<pre><code class="language-python">if 1 == 1:
-    if 2 == 2:
-        print( '1 == 1 and 2 == 2' )
-</code></pre>
-<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="k">if</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;1 == 1 and 2 == 2&#39;</span> <span class="p">)</span>
+</code></pre></div>
+</details>
 <h3 id="logicke-operatory">Logické operátory</h3>
 <p>Už poznáme logické hodnoty: <code>False</code> a <code>True</code>. Vieme, že výsledkom porovnávacích
 operátorov sú práve tieto hodnoty. Ale čo ak potrebujeme otestovať dve
 podmienky naraz? Napr. "Ak vonku prší a je pondelok, nepôjdem do školy". Môžeme
 taký program napísať pomocou dvoch príkazov <code>if</code>:</p>
-<pre><code class="language-python">if wheather == 'raining':
-    if weekday == 'monday':
-        go_to_school = False
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">if</span> <span class="n">wheather</span> <span class="o">==</span> <span class="s1">&#39;raining&#39;</span><span class="p">:</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="k">if</span> <span class="n">weekday</span> <span class="o">==</span> <span class="s1">&#39;monday&#39;</span><span class="p">:</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        <span class="n">go_to_school</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
 <p>Teraz si ukážeme 3 logické operátory, ktoré nám pomôžu napísať aj zložitejšie
 podmienky v jednom <code>if</code>e.</p>
 <h4 id="a-zaroven">A zároveň</h4>
-<pre><code class="language-python">if a and b:
-    ...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="o">...</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -361,9 +767,9 @@ podmienky v jednom <code>if</code>e.</p>
 </tbody>
 </table>
 <h4 id="alebo">Alebo</h4>
-<pre><code class="language-python">if a or b:
-    ...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">if</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">:</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="o">...</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -396,9 +802,9 @@ podmienky v jednom <code>if</code>e.</p>
 </tbody>
 </table>
 <h4 id="zapor">Zápor</h4>
-<pre><code class="language-python">if not a:
-    ...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">a</span><span class="p">:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="o">...</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -419,97 +825,124 @@ podmienky v jednom <code>if</code>e.</p>
 </table>
 <h4 id="pouzitie">Použitie</h4>
 <p>Niekoľko prípadov použitia si ukážeme v shelli:</p>
-<pre><code class="language-python">&gt;&gt;&gt; ( 1 &lt; 2 ) and ( 3 &lt; 4 )
-True
-&gt;&gt;&gt; 'A' == 'B' or 1 != 2
-True
-&gt;&gt;&gt; 1 == 2 or 2 == 1
-False
-&gt;&gt;&gt; not 4 &gt; 5
-True
-&gt;&gt;&gt; False or not 1 &gt;= 1
-False
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="p">)</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kc">True</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;A&#39;</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span> <span class="ow">or</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">2</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="kc">True</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="kc">False</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">5</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="kc">True</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="ow">or</span> <span class="ow">not</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">1</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="kc">False</span>
+</code></pre></div>
 <p>Zátvorky použiť môžeme, ale keďže porovnávacie operátory majú vyššiu prioritu
 ako logické, vyhodnotia sa ešte pred nimi, a teda to nie je nutné.</p>
 <h3 id="neodbytnejsi-kreslic">Neodbytnejší kreslič</h3>
 <p>Upravíme teraz kresliča trojuholníkov tak, aby v prípade nevalidnej veľkosti
 neskončil hneď, ale bol neodbytný a pýtal sa na veľkosť, pokým nejakú nedostane
-(alebo nebude nakoniec v zúrivosti vypnutý pomocou Ctrl+C).</p>
-<pre><code class="language-python">done = False
-
-while not done:
-    size = int( input( 'Enter size: ' ) )
-
-    if size &lt; 0 or size &gt; 10:
-        print( 'Error!' )
-
-    if size &lt; 0:
-        print( 'We need a non-negative size' )
-    elif size &gt; 10:
-        print( 'This is too much. We accept at most size of 10.' )
-    else:
-        done = True
-
-while size &gt; 0:
-    print( '*' * size )
-    size -= 1
-</code></pre>
+(alebo nebude nakoniec v zúrivosti vypnutý pomocou <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span>
+<span class="normal"><a href="#__codelineno-21-14">14</a></span>
+<span class="normal"><a href="#__codelineno-21-15">15</a></span>
+<span class="normal"><a href="#__codelineno-21-16">16</a></span>
+<span class="normal"><a href="#__codelineno-21-17">17</a></span>
+<span class="normal"><a href="#__codelineno-21-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter size: &#39;</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>    <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Error!&#39;</span> <span class="p">)</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>    <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;We need a non-negative size&#39;</span> <span class="p">)</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>    <span class="k">elif</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;This is too much. We accept at most size of 10.&#39;</span> <span class="p">)</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>        <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">size</span> <span class="p">)</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a>    <span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
 <p>Prejdime si zdrojový kód riadok za riadkom:</p>
-<pre><code class="language-python">done = False
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
 <p>V tejto premennej si budeme uchovávať informáciu o tom, či sa nám už podarilo
 načítať validný vstup (veľkosť). Na začiatku programu rozhodne ešte žiaden
 vstup od užívateľa nemáme, preto nastavíme <code>done</code> na <code>False</code>.</p>
-<pre><code class="language-python">while not done:
-    size = int( input( 'Enter size: ' ) )
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>    <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter size: &#39;</span> <span class="p">)</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <p>Toto je hlavný cyklus načítavania veľkosti. Pokým nebudeme mať poznačené v
 <code>done</code>, že už sme načítali dobrý vstup, cyklus sa bude opakovať. Spôsob
 načítania už poznáme.</p>
-<pre><code class="language-python">    if size &lt; 0 or size &gt; 10:
-        print( 'Error!' )
-
-    if size &lt; 0:
-        print( 'We need a non-negative size' )
-    elif size &gt; 10:
-        print( 'This is too much. We accept at most size of 10.' )
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-6" name="__codelineno-24-6"></a>    <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Error!&#39;</span> <span class="p">)</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a>    <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;We need a non-negative size&#39;</span> <span class="p">)</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a>    <span class="k">elif</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;This is too much. We accept at most size of 10.&#39;</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <p>Otestujeme, či je veľkosť validná. Ak nie, napíšeme používateľovi, že niečo je
 zle a potom aj ČO je zle.</p>
-<pre><code class="language-python">    else:
-        done = True
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-13" name="__codelineno-25-13"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a>        <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
 <p>Ak je všetko OK, poznačíme si, že sa nám podarilo načítať veľkosť, a tak pri
 ďalšom testovaní podmienky cyklu, výraz <code>not done</code> sa vyhodnotí na False a
 program bude pokračovať za <code>while</code> cyklom.</p>
-<pre><code class="language-python">while size &gt; 0:
-    print( '*' * size )
-    size -= 1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-16">16</a></span>
+<span class="normal"><a href="#__codelineno-26-17">17</a></span>
+<span class="normal"><a href="#__codelineno-26-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">size</span> <span class="p">)</span>
+<a id="__codelineno-26-18" name="__codelineno-26-18"></a>    <span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
 <p>Tu sa nič nezmenilo, tak ako aj doteraz, vykreslíme trojuholník.</p>
-<hr />
-<p><strong>Úloha</strong></p>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Vytvorte program, ktorý nechá používateľa hádať, aké číslo si myslí počítač.
 Vyzerať by to mohlo podobne ako:</p>
-<pre><code class="language-text">Let's play a game: Guess the number I've chosen (1..100 inclusive)
-Your guess: 12
-Try a greater number
-Your guess: 50
-Try a lower number
-Your guess: 45
-Try a lower number
-Your guess: 42
-Congratulation!
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Let&#39;s play a game: Guess the number I&#39;ve chosen (1..100 inclusive)
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Your guess: 12
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Try a greater number
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>Your guess: 50
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Try a lower number
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>Your guess: 45
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>Try a lower number
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>Your guess: 42
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>Congratulation!
+</code></pre></div>
 <p>Poznámka: Vytvoriť v programe náhodné číslo ešte nevieme, zatiaľ kľudne môže
 byť toto číslo priamo napísané v zdrojovom kóde a uložené v premennej na
 začiatku kódu.</p>
-<pre><code class="language-python">number = 42
-
-# Main program logic follows...
-</code></pre>
-<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">number</span> <span class="o">=</span> <span class="mi">42</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="c1"># Main program logic follows...</span>
+</code></pre></div>
+</details>
 <h2 id="zoznam">Zoznam</h2>
 <p>Zopakujme si, aké dátové typy poznáme:</p>
 <ul>
@@ -525,150 +958,164 @@ začiatku kódu.</p>
 <p>Ako aj názov napovedá, do zoznamu si budeme ukladať viacero hodnôt. Je to
 vlastne postupnosť čísel, textu, logických hodnôt, ..., dokonca aj samotných
 zoznamov. Aby sme vytvorili zoznam hodnôt, vpíšeme ich medzi hranaté zátvorky.</p>
-<pre><code class="language-python">&gt;&gt;&gt; [ 1, 2, 3, 4, 5 ]
-[1, 2, 3, 4, 5]
-&gt;&gt;&gt; [ 1, False, 3, 'ABCD', 5, [ 4.2, [] ] ]
-[1, False, 3, 'ABCD', 5, [4.2, []]]
-&gt;&gt;&gt; type( [ 1, False, 'ABC' ] )
-&lt;class 'list'&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">]</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;ABCD&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span> <span class="mf">4.2</span><span class="p">,</span> <span class="p">[]</span> <span class="p">]</span> <span class="p">]</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;ABCD&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mf">4.2</span><span class="p">,</span> <span class="p">[]]]</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;ABC&#39;</span> <span class="p">]</span> <span class="p">)</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">list</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
 <p>Hodnoty uložené v zozname nazývame <em>prvky</em> a pristupujeme k nim cez <em>index</em>.
 Index je poradie prvku od začiatku zoznamu, pričom prvý prvok má index 0. Na
 indexovanie používame hranaté zátvorky.</p>
-<pre><code class="language-python">&gt;&gt;&gt; l = [ 1, False, 3, 'ABCD', 5, [ 4.2, [] ] ]
-&gt;&gt;&gt; l[0]
-1
-&gt;&gt;&gt; l[1]
-False
-&gt;&gt;&gt; l[5]
-[4.2, []]
-&gt;&gt;&gt; l[5][1]
-[]
-&gt;&gt;&gt; l[-1]
-[4.2, []]
-&gt;&gt;&gt; l[-2]
-5
-&gt;&gt;&gt; l[6]
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-IndexError: list index out of range
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;ABCD&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span> <span class="mf">4.2</span><span class="p">,</span> <span class="p">[]</span> <span class="p">]</span> <span class="p">]</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="mi">1</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="kc">False</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="p">[</span><span class="mf">4.2</span><span class="p">,</span> <span class="p">[]]</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="p">[]</span>
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="p">[</span><span class="mf">4.2</span><span class="p">,</span> <span class="p">[]]</span>
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a><span class="mi">5</span>
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a><span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</code></pre></div>
 <p>Indexy môžu byť aj záporné, vtedy označuje poradie odzadu. No pozor na príliš
 vysoké indexy. Ak chceme pristúpiť k prvku za koncom zoznamu, dostaneme chybovú
 hlášku.</p>
 <p>Prvky v zozname môžeme aj upravovať:</p>
-<pre><code class="language-python">&gt;&gt;&gt; l[1] = 2
-&gt;&gt;&gt; l
-[1, 2, 3, 'ABCD', 5, [4.2, []]]
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;ABCD&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mf">4.2</span><span class="p">,</span> <span class="p">[]]]</span>
+</code></pre></div>
 <p>A prípadne celý zoznam vieme predĺžiť. Existuje viacero spôsobov:</p>
-<pre><code class="language-python">&gt;&gt;&gt; l = [ 1, 2 ]
-&gt;&gt;&gt; l.append( 3 )
-&gt;&gt;&gt; l
-[1, 2, 3]
-&gt;&gt;&gt; l.extend( [ 4, 5, 5 ] )
-&gt;&gt;&gt; l
-[1, 2, 3, 4, 5, 5]
-&gt;&gt;&gt; l + [ 0 ]
-[1, 2, 3, 4, 5, 5, 0]
-&gt;&gt;&gt; l
-[1, 2, 3, 4, 5, 5]
-&gt;&gt;&gt; l += [ 0 ]
-&gt;&gt;&gt; l
-[1, 2, 3, 4, 5, 5, 0]
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">]</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="mi">3</span> <span class="p">)</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span> <span class="p">[</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span> <span class="p">]</span> <span class="p">)</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">+</span> <span class="p">[</span> <span class="mi">0</span> <span class="p">]</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">+=</span> <span class="p">[</span> <span class="mi">0</span> <span class="p">]</span>
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
 <p>Operátor <code>+</code> vytvorí <strong>nový</strong> zoznam z pôvodných dvoch -- tieto dva zostanú
 nezmenené. Ak chceme zoznam predĺžiť, a teda naozaj ho zmeniť, musíme
 na to použiť operátor <code>+=</code>.
 A vieme ho zase skrátiť:</p>
-<pre><code class="language-python">&gt;&gt;&gt; l.pop()
-0
-&gt;&gt;&gt; l
-[1, 2, 3, 4, 5, 5]
-&gt;&gt;&gt; a = l.pop()
-&gt;&gt;&gt; a
-5
-&gt;&gt;&gt; l
-[1, 2, 3, 4, 5]
-&gt;&gt;&gt; del l[1]
-&gt;&gt;&gt; l
-[1, 3, 4, 5]
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="mi">0</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="mi">5</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">del</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
 <p><code>pop()</code> zmaže posledný prvok, ktorý si zároveň môžeme niekam uložiť. <code>del</code>
 vymaže ľubovoľný prvok na danom indexe.</p>
 <p>Ukážme si, čo ešte vieme so zoznamom robiť:</p>
-<pre><code class="language-python">&gt;&gt;&gt; l.reverse() # obráti zoznam
-&gt;&gt;&gt; l
-[5, 4, 3, 1]
-&gt;&gt;&gt; l.clear() # vymaže všetky prvky
-&gt;&gt;&gt; l
-[]
-&gt;&gt;&gt; l = [ 1 ]
-&gt;&gt;&gt; l.insert( 0, 8 ) # vloží prvok 8 na index 0
-&gt;&gt;&gt; l
-[8, 1]
-&gt;&gt;&gt; l.insert( 1, 9 )
-&gt;&gt;&gt; l
-[8, 9, 1]
-&gt;&gt;&gt; l.remove( 8 ) # odstráni prvý výskit prvku 8
-&gt;&gt;&gt; l
-[9, 1]
-&gt;&gt;&gt; l.remove( 0 ) # ak daný prvok neexistuje, chyba
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-ValueError: list.remove(x): x not in list
-&gt;&gt;&gt; l = [ 1, 4, 4, 9, 2, 0, 3, 4 ]
-&gt;&gt;&gt; l.count( 1 ) # spočíta počet výskitov prvku
-1
-&gt;&gt;&gt; l.count( 4 )
-3
-&gt;&gt;&gt; l.count( 42 )
-0
-&gt;&gt;&gt; l.sort() # zoradí zoznam
-&gt;&gt;&gt; l
-[0, 1, 2, 3, 4, 4, 4, 9]
-&gt;&gt;&gt; l.index( 4 ) # vráti index prvého výskitu prvku
-4
-&gt;&gt;&gt; l.index( 5 ) # chyba, podobne ako pri 'remove'
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-ValueError: 5 is not in list
-&gt;&gt;&gt; len( l ) # zistí dĺžku (počet prvkov) zoznamu
-8
-&gt;&gt;&gt; len( [ 'robo', 'lab' ] )
-2
-&gt;&gt;&gt; len( [] )
-0
-&gt;&gt;&gt; 3 in [ 2, 3, 1 ] # test na prítomnosť prvku v zozname
-True
-&gt;&gt;&gt; 1 in [ 4, 5 ]
-False
-&gt;&gt;&gt; 'l' in 'hello'
-True
-&gt;&gt;&gt; 0 in []
-False
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1"># obráti zoznam</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># vymaže všetky prvky</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="p">[]</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span> <span class="p">]</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span> <span class="p">)</span> <span class="c1"># vloží prvok 8 na index 0</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span> <span class="p">)</span>
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span> <span class="mi">8</span> <span class="p">)</span> <span class="c1"># odstráni prvý výskit prvku 8</span>
+<a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span> <span class="mi">0</span> <span class="p">)</span> <span class="c1"># ak daný prvok neexistuje, chyba</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="nb">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span>
+<a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="p">]</span>
+<a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span> <span class="c1"># spočíta počet výskitov prvku</span>
+<a id="__codelineno-34-23" name="__codelineno-34-23" href="#__codelineno-34-23"></a><span class="mi">1</span>
+<a id="__codelineno-34-24" name="__codelineno-34-24" href="#__codelineno-34-24"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span> <span class="mi">4</span> <span class="p">)</span>
+<a id="__codelineno-34-25" name="__codelineno-34-25" href="#__codelineno-34-25"></a><span class="mi">3</span>
+<a id="__codelineno-34-26" name="__codelineno-34-26" href="#__codelineno-34-26"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span> <span class="mi">42</span> <span class="p">)</span>
+<a id="__codelineno-34-27" name="__codelineno-34-27" href="#__codelineno-34-27"></a><span class="mi">0</span>
+<a id="__codelineno-34-28" name="__codelineno-34-28" href="#__codelineno-34-28"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># zoradí zoznam</span>
+<a id="__codelineno-34-29" name="__codelineno-34-29" href="#__codelineno-34-29"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
+<a id="__codelineno-34-30" name="__codelineno-34-30" href="#__codelineno-34-30"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<a id="__codelineno-34-31" name="__codelineno-34-31" href="#__codelineno-34-31"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">index</span><span class="p">(</span> <span class="mi">4</span> <span class="p">)</span> <span class="c1"># vráti index prvého výskitu prvku</span>
+<a id="__codelineno-34-32" name="__codelineno-34-32" href="#__codelineno-34-32"></a><span class="mi">4</span>
+<a id="__codelineno-34-33" name="__codelineno-34-33" href="#__codelineno-34-33"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span><span class="o">.</span><span class="n">index</span><span class="p">(</span> <span class="mi">5</span> <span class="p">)</span> <span class="c1"># chyba, podobne ako pri &#39;remove&#39;</span>
+<a id="__codelineno-34-34" name="__codelineno-34-34" href="#__codelineno-34-34"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-34-35" name="__codelineno-34-35" href="#__codelineno-34-35"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-34-36" name="__codelineno-34-36" href="#__codelineno-34-36"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="mi">5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span>
+<a id="__codelineno-34-37" name="__codelineno-34-37" href="#__codelineno-34-37"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span> <span class="n">l</span> <span class="p">)</span> <span class="c1"># zistí dĺžku (počet prvkov) zoznamu</span>
+<a id="__codelineno-34-38" name="__codelineno-34-38" href="#__codelineno-34-38"></a><span class="mi">8</span>
+<a id="__codelineno-34-39" name="__codelineno-34-39" href="#__codelineno-34-39"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span> <span class="p">[</span> <span class="s1">&#39;robo&#39;</span><span class="p">,</span> <span class="s1">&#39;lab&#39;</span> <span class="p">]</span> <span class="p">)</span>
+<a id="__codelineno-34-40" name="__codelineno-34-40" href="#__codelineno-34-40"></a><span class="mi">2</span>
+<a id="__codelineno-34-41" name="__codelineno-34-41" href="#__codelineno-34-41"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span> <span class="p">[]</span> <span class="p">)</span>
+<a id="__codelineno-34-42" name="__codelineno-34-42" href="#__codelineno-34-42"></a><span class="mi">0</span>
+<a id="__codelineno-34-43" name="__codelineno-34-43" href="#__codelineno-34-43"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="ow">in</span> <span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span> <span class="p">]</span> <span class="c1"># test na prítomnosť prvku v zozname</span>
+<a id="__codelineno-34-44" name="__codelineno-34-44" href="#__codelineno-34-44"></a><span class="kc">True</span>
+<a id="__codelineno-34-45" name="__codelineno-34-45" href="#__codelineno-34-45"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">]</span>
+<a id="__codelineno-34-46" name="__codelineno-34-46" href="#__codelineno-34-46"></a><span class="kc">False</span>
+<a id="__codelineno-34-47" name="__codelineno-34-47" href="#__codelineno-34-47"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;l&#39;</span> <span class="ow">in</span> <span class="s1">&#39;hello&#39;</span>
+<a id="__codelineno-34-48" name="__codelineno-34-48" href="#__codelineno-34-48"></a><span class="kc">True</span>
+<a id="__codelineno-34-49" name="__codelineno-34-49" href="#__codelineno-34-49"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="ow">in</span> <span class="p">[]</span>
+<a id="__codelineno-34-50" name="__codelineno-34-50" href="#__codelineno-34-50"></a><span class="kc">False</span>
+</code></pre></div>
 <h3 id="priemer-cisel">Priemer čísel</h3>
 <p>Aby sme si ukázali príklad využitia zoznamu, vytvoríme program, ktorý vypočíta
 priemer čísel zadaných používateľom. Tie si budeme ukladať do zoznamu. Ako
 budeme ale vedieť, kedy užívateľ už napísal všetky čísla? Dáme mu možnosť to
 oznámiť napr. tým, že zadá text "end".</p>
-<pre><code class="language-python">print( 'I\'ll compute the mean value of all the entered numbers.' )
-print( 'Type &quot;end&quot; after entering all of them.' )
-
-done = False
-numbers = []
-
-while not done:
-    number = input( 'Enter a number (or &quot;end&quot;): ' )
-
-    if number == 'end':
-        done = True
-    else:
-        numbers.append( int( number ) )
-
-print( 'Entered numbers:', numbers )
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span>
+<span class="normal"><a href="#__codelineno-35-12">12</a></span>
+<span class="normal"><a href="#__codelineno-35-13">13</a></span>
+<span class="normal"><a href="#__codelineno-35-14">14</a></span>
+<span class="normal"><a href="#__codelineno-35-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;I</span><span class="se">\&#39;</span><span class="s1">ll compute the mean value of all the entered numbers.&#39;</span> <span class="p">)</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Type &quot;end&quot; after entering all of them.&#39;</span> <span class="p">)</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a>    <span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Enter a number (or &quot;end&quot;): &#39;</span> <span class="p">)</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a>
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a>    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a>        <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-35-13" name="__codelineno-35-13"></a>        <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="nb">int</span><span class="p">(</span> <span class="n">number</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-35-14" name="__codelineno-35-14"></a>
+<a id="__codelineno-35-15" name="__codelineno-35-15"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Entered numbers:&#39;</span><span class="p">,</span> <span class="n">numbers</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <p>Na začiatku užívateľa informujeme o tom ako používať náš program. Všimnime si,
 že na to, aby sme vypísali jednoduchú úvodzovku, musíme pred ňu napísať
 špeciálny znak spätné lomítko (\). Je to preto, lebo úvodzovkami sa označuje
@@ -677,15 +1124,22 @@ by ako text pochopil iba "I" a dostali by sme chybu.</p>
 <p>Vstup načítame najprv ako text, aby sme mohli otestovať koniec zadávania čísel,
 a keď ten nenastane, konvertujeme ho na celé číslo a pridáme do zoznamu. Na
 konci vypíšeme všetky čísla z ktorých budeme rátať priemer.</p>
-<pre><code class="language-python">i = 0
-summ = 0
-
-while i &lt; len( numbers ):
-    summ += numbers[i]
-    i += 1
-
-print( 'Mean:', summ / len( numbers ) )
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span>
+<span class="normal"><a href="#__codelineno-36-4">4</a></span>
+<span class="normal"><a href="#__codelineno-36-5">5</a></span>
+<span class="normal"><a href="#__codelineno-36-6">6</a></span>
+<span class="normal"><a href="#__codelineno-36-7">7</a></span>
+<span class="normal"><a href="#__codelineno-36-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="n">summ</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span> <span class="n">numbers</span> <span class="p">):</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a>    <span class="n">summ</span> <span class="o">+=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a>    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Mean:&#39;</span><span class="p">,</span> <span class="n">summ</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span> <span class="n">numbers</span> <span class="p">)</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <p>Aby sme vypočítali priemer, najprv pomocou cyklu sčítame všetky čísla. Premenná
 <code>i</code> má na začiatku hodnotu nula, teda index prvého prvu. Postupne sa zvyšuje o
 jedna, takže sa posúvame na ďalšie prvky. Musíme si dať pozor, aby sme
@@ -694,41 +1148,42 @@ prvého prvku je nula, index druhého jedna, atď. Takže ak dĺžka zoznamu je 
 posledný index je 4. Posledný index je vždy o jedna menší než dĺžka zoznamu.
 Preto sme použili v podmienke porovnanie <code>i &lt; len( numbers )</code>. Keď po poslednom
 prvku zvýšime <code>i</code> o jedna, už sa bude rovnať dĺžke zoznamu, a cyklus skončí.</p>
-<hr />
-<p><strong>Úloha</strong></p>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Vytvorte podobný program s nasledujúcimi dvomi rozdielmi:</p>
 <ol>
 <li>Namiesto priemeru, vypočítajte
    <a href="https://sk.wikipedia.org/wiki/Medi%C3%A1n">medián</a>:<blockquote>
-<p>"Na nájdenie mediánu daného súboru stačí hodnoty usporiadať podľa veľkosti
-a zobrať hodnotu, ktorá sa nachádza v strede zoznamu. Ak má súbor párny
-počet prvkov, zvyčajne sa za medián označí aritmetický priemer hodnôt na
-mieste n/2 a (n+2)/2, ktoré sa nachádzajú v oblasti prostrednej hodnoty."</p>
+<p>"Na nájdenie mediánu daného súboru stačí hodnoty usporiadať podľa
+veľkosti a zobrať hodnotu, ktorá sa nachádza v strede zoznamu. Ak má
+súbor párny počet prvkov, zvyčajne sa za medián označí aritmetický
+priemer hodnôt na mieste n/2 a (n+2)/2, ktoré sa nachádzajú v oblasti
+prostrednej hodnoty."</p>
 </blockquote>
 </li>
 <li>Užívateľ najprv zadá koľko čísel bude nasledovať, potom na každom riadku
    napíše jedno číslo. Takže už nemusí ukončiť čísla textom "end". Príklad
    toho, čo môže zadať používateľ:</li>
 </ol>
-<pre><code class="language-text">4
-25
-7
-1
-13
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>4
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>25
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>7
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>1
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>13
+</code></pre></div>
 <p>Medián týchto štyroch čísel je (7 + 13) / 2 = 10.</p>
-<hr />
+</details>
 <h3 id="for-in">for ... in ...</h3>
 <p>Na <em>iterovanie</em> (prechádzanie prvkov) cez zoznam sme použili <code>while</code> cyklus.
 Nie je to jediná možnosť a v tejto časti si ukážeme vhodnejšiu riadiacu
 štruktúru.</p>
-<pre><code class="language-python">&gt;&gt;&gt; for n in [ 1, 5, 3 ]:
-...     print( 'n =', n )
-...
-n = 1
-n = 5
-n = 3
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]:</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;n =&#39;</span><span class="p">,</span> <span class="n">n</span> <span class="p">)</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="o">...</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
 <p>Na konci príkazu <code>for in</code> je dvojbodka, takže telo cyklu znovu musí byť
 odsadené doprava. Takéto krátke programy vieme písať aj priamo v shelli, <code>...</code>
 na začiatku znamenajú, že náš program/príkaz pokračuje. Za poslednými <code>...</code>
@@ -738,95 +1193,121 @@ spustí (interpretuje).</p>
 postupne ukladané všetky hodnoty zo zoznamu uvedenom po <code>in</code>.</p>
 <p>Tento nový typ cyklu využijeme v programe rátajúcom priemer čísel. Namiesto
 <code>while</code> cyklu a pomocnej premennej <code>i</code>, napíšeme len:</p>
-<pre><code class="language-python">summ = 0
-
-for number in numbers:
-    summ += number
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">summ</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>    <span class="n">summ</span> <span class="o">+=</span> <span class="n">number</span>
+</code></pre></div>
 <hr />
 <p>Program vieme dokonca zjednodušiť ešte viac. Python pozná príkaz <code>sum()</code>,
 ktorým sčíta všetky hodnoty v zozname:</p>
-<pre><code class="language-python">summ = sum( numbers )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">summ</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span> <span class="n">numbers</span> <span class="p">)</span>
+</code></pre></div>
 <p>Mimochodom, to je dôvod, prečo sme na názov premennej nepoužili "sum" ale
 "summ". Podobne by sme nemali používať názvy premenných ako "for", "in",
 "else", atď. Väčšinou platí, že ak nám editor zafarbí slovo na nejakú farbu,
 tak je to slovo vyhradené pre jazyk Python a ak nechceme mať problémy, nebudeme
 ho používať na názov premennej.</p>
-<hr />
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
 <p>Aj na textový reťazec sa môžme pozerať ako na zoznam, a to zoznam znakov.</p>
-<pre><code class="language-python">&gt;&gt;&gt; for c in 'word':
-...     print( 2 * c )
-...
-ww
-oo
-rr
-dd
-</code></pre>
-<hr />
-<p><strong>Úloha</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;word&#39;</span><span class="p">:</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">c</span> <span class="p">)</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="o">...</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="n">ww</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="n">oo</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="n">rr</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="n">dd</span>
+</code></pre></div>
+</div>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Napíšte program, ktorý sa spýta užívateľa na jedno, ľubovoľné slovo. Potom
 vypíše jeho písmena spolu s poradím. Napr.:</p>
-<pre><code class="language-text">Enter one word: apple
-1. letter: a
-2. letter: p
-3. letter: p
-4. letter: l
-5. letter: e
-</code></pre>
-<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Enter one word: apple
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>1. letter: a
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>2. letter: p
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>3. letter: p
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>4. letter: l
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>5. letter: e
+</code></pre></div>
+</details>
+
+
+
+
               
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../01/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Úvod do Pythonu" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Úvod do Pythonu
             </div>
           </div>
-          <footer>
+        </a>
+      
+      
+        
+        <a href="../03/" class="md-footer__link md-footer__link--next" aria-label="Next: Python: funkcie, range, vlastná hra" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Python: funkcie, range, vlastná hra
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../03/" class="btn btn-neutral float-right" title="Python: funkcie, range, vlastná hra">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../01/" class="btn btn-neutral" title="Úvod do Pythonu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
   </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <span><a href="../01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
     
-    
-      <span><a href="../03/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+  </body>
 </html>

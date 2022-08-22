@@ -1,109 +1,353 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="canonical" href="https://example.com/03/">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Python: funkcie, range, vlastná hra - RLLR</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Python: funkcie, range, vlastn\u00e1 hra";
-    var mkdocs_page_input_path = "03.md";
-    var mkdocs_page_url = "/03/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Python: funkcie, range, vlastná hra - RLLR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> RLLR</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-funkcie-range-vlastna-hra" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../01/">Úvod do Pythonu</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../02/">Python: vstup, riadiace štruktúry, zoznam</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Python: funkcie, range, vlastná hra</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#funkcie">Funkcie</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#range">range</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#labyrint">Labyrint</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RLLR" class="md-header__button md-logo" aria-label="RLLR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RLLR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python: funkcie, range, vlastná hra
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">RLLR</a>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RLLR" class="md-nav__button md-logo" aria-label="RLLR" data-md-component="logo">
       
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    RLLR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
     
-    <li>Python: funkcie, range, vlastná hra</li>
-    <li class="wy-breadcrumbs-aside">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01/" class="md-nav__link">
+        Úvod do Pythonu
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02/" class="md-nav__link">
+        Python: vstup, riadiace štruktúry, zoznam
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python: funkcie, range, vlastná hra
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python: funkcie, range, vlastná hra
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funkcie" class="md-nav__link">
+    Funkcie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labyrint" class="md-nav__link">
+    Labyrint
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
-  </ul>
   
-  <hr/>
-</div>
 
-          <div role="main">
-            <div class="section">
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
               
-                <h1 id="python-funkcie-range-vlastna-hra">Python: funkcie, range, vlastná hra</h1>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funkcie" class="md-nav__link">
+    Funkcie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labyrint" class="md-nav__link">
+    Labyrint
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="python-funkcie-range-vlastna-hra">Python: funkcie, range, vlastná hra</h1>
 <h2 id="funkcie">Funkcie</h2>
 <p>Príkazy <code>print</code>, <code>int</code>, <code>input</code>, <code>len</code>, ..., ktoré sme používali doteraz, majú
 niečo spoločné. Pozrime sa na ne ako na stroje.</p>
@@ -118,30 +362,31 @@ nám hodnotu <code>10</code>. Takýmto príkazom hovoríme <em>funkcie</em>. Fun
 (<em>návratová hodnota</em>). Niektoré funkcie nemusia
 mať argument, napr. <code>input()</code>, naopak <code>print( 'a', 4, 10 )</code> má viac argumentov
 (jednotlivé argumenty oddeľujeme čiarkou), ale zase žiadnu návratovú hodnotu.</p>
-<hr />
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
 <p>To, že <code>print</code> nemá návratovú hodnotu nie je tak úplne pravda:</p>
-<pre><code class="language-python">&gt;&gt;&gt; r = print( 'test' )
-test
-&gt;&gt;&gt; r
-&gt;&gt;&gt; print( r )
-None
-&gt;&gt;&gt; type( r )
-&lt;class 'NoneType'&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;test&#39;</span> <span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">test</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">r</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">r</span> <span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kc">None</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="n">r</span> <span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">NoneType</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
 <p>Návratová hodnota je <code>None</code>. Je to jediná možná hodnota dátového typu
-<code>NoneType</code>. Uvádzam to len pre zaujímavosť, pre nás to teraz vôbec nie je
+<code>NoneType</code>. Len pre zaujímavosť, pre nás to teraz vôbec nie je
 dôležité.</p>
-<hr />
+</div>
 <p>Dobrá správa je: Python umožňuje vytvoriť si vlastné funkcie! Slúži na to
 príkaz <code>def</code>, znovu na konci obsahuje dvojbodku a nasleduje blok kódu (<em>telo
 funckie</em>) odsadený vpravo, ktorý sa vykoná, ak túto funkciu <em>zavoláme</em> (to
 znamená, použijeme ju v programe).</p>
-<pre><code class="language-python">def say_hi( who ):
-    print( 'Hi', who )
-
-say_hi( 'robot' )
-say_hi( 'Adam' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span> <span class="n">who</span> <span class="p">):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Hi&#39;</span><span class="p">,</span> <span class="n">who</span> <span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">say_hi</span><span class="p">(</span> <span class="s1">&#39;robot&#39;</span> <span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">say_hi</span><span class="p">(</span> <span class="s1">&#39;Adam&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Prvý riadok sa nazýva <em>hlavička funkcie</em>. Určuje názov funkcie a <em>parametry</em>.
 Medzi parametrom a argumentom je veľmi slabý rozdiel a často sa ich význam
 zamieňa. Ak chceme byť presný, <code>'robot'</code> a <code>'Adam'</code> sú argumenty. <code>who</code> je
@@ -149,124 +394,126 @@ parameter. Ako <strong>a</strong>uto zaparkuje na <strong>p</strong>arkovisko, t
 zaparkuje na <strong>p</strong>arameter, takže hodnota <code>'robot'</code> (argument) sa uloží do
 premennej <code>who</code> (parameter). Ešte inak: ak sa pozeráme zvnútra funkcie, vidíme
 parametre. Ak sa pozeráme zvonka, vidíme argumenty.</p>
-<hr />
-<p><strong>Úloha 1</strong></p>
+<details class="question" open="open">
+<summary>Úloha 1</summary>
 <p>Napíšte funkciu <code>print_max</code>, ktorá vypíše maximálny prvok v zozname. Ak je
 zoznam prázdny, vypíše túto informáciu. Napr:</p>
-<pre><code class="language-text">print_max( [ 3, 9, 0 ] ) vypíše: 9
-print_max( [] ) vypíše: Max element does not exist (the list is empty)
-print_max( 'dkrn' ) vypíše: r
-</code></pre>
-<p><strong>Úloha 2</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>print_max( [ 3, 9, 0 ] ) vypíše: 9
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>print_max( [] ) vypíše: Max element does not exist (the list is empty)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>print_max( &#39;dkrn&#39; ) vypíše: r
+</code></pre></div>
+</details>
+<details class="question" open="open">
+<summary>Úloha 2</summary>
 <p>Pokúste sa v definícii funkcie "print_max" použiť funkciu <code>max</code> (ktorá je už
 vstavaná v Pythone). Krátka ukážka ako funguje:</p>
-<pre><code class="language-python">&gt;&gt;&gt; max( [ 1, 2, 0 ] )
-2
-&gt;&gt;&gt; max( 'dkrn' )
-'r'
-&gt;&gt;&gt; max( [] )
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-  ValueError: max() arg is an empty sequence
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">max</span><span class="p">(</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span> <span class="p">]</span> <span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="mi">2</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">max</span><span class="p">(</span> <span class="s1">&#39;dkrn&#39;</span> <span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s1">&#39;r&#39;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">max</span><span class="p">(</span> <span class="p">[]</span> <span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  <span class="ne">ValueError</span><span class="p">:</span> <span class="nb">max</span><span class="p">()</span> <span class="n">arg</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">sequence</span>
+</code></pre></div>
 <p>Takže pozor na to, aby argumentom nebol prázdny zoznam, toto bude treba
 otestovať ešte pred tým, ako sa zavolá funkcia <code>max</code>.</p>
-<hr />
+</details>
 <p>Čo ak by sme chceli aj my niečo vrátiť z našej vlastnej funkcie, nielen
 vypisovať? Slúži na to slovíčko <code>return</code>:</p>
-<pre><code class="language-python">def area( a, b ):
-    return a * b
-
-print( area( 2, 3 ) )
-print( area( 0, 10 ) + area( 10, 0 ) )
-print( area( 1, area( 2, 3 ) ) ) # well, this is &quot;volume&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">area</span><span class="p">(</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span> <span class="n">area</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span> <span class="n">area</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">+</span> <span class="n">area</span><span class="p">(</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span> <span class="n">area</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="n">area</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="c1"># well, this is &quot;volume&quot;</span>
+</code></pre></div>
 <p>Prvý riadok (po definícii funkcie <code>area</code>) zavolá <code>area( 2, 3 )</code>. Do premennej
 <code>a</code> sa uloží hodnota <code>2</code>, do <code>b</code> hodnota <code>3</code>. Potom sa vyhodnotí <code>a * b</code> na
 hodnotu <code>12</code>, ktorá sa vráti spať a vykoná sa <code>print( 12 )</code>. Podobne si vieme
 rozobrať aj posledný riadok:</p>
 <ol>
-<li><code>print( area( 1, area( 2, 3 ) ) )</code></li>
-<li><code>print( area( 1, 6 ) )</code></li>
-<li><code>print( 6 )</code></li>
+<li><code class="highlight"><span class="nb">print</span><span class="p">(</span> <span class="n">area</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="n">area</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span></code></li>
+<li><code class="highlight"><span class="nb">print</span><span class="p">(</span> <span class="n">area</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span> <span class="p">)</span> <span class="p">)</span></code></li>
+<li><code class="highlight"><span class="nb">print</span><span class="p">(</span> <span class="mi">6</span> <span class="p">)</span></code></li>
 <li>Na obrazovke uvidíme text "6"</li>
 </ol>
-<hr />
-<p><strong>Úloha</strong></p>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Napíšte funkciu, ktorá vráti počet kladných čísel v zozname.</p>
-<pre><code class="language-text">[] -&gt; 0
-[ 2, 3 ] -&gt; 2
-[ 0, 4, 9, -2, 10 ] -&gt; 3
-[ -2, 0, -5 ] -&gt; 0
-</code></pre>
-<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[] -&gt; 0
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>[ 2, 3 ] -&gt; 2
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>[ 0, 4, 9, -2, 10 ] -&gt; 3
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>[ -2, 0, -5 ] -&gt; 0
+</code></pre></div>
+</details>
 <h2 id="range">range</h2>
 <p>Ukážeme si jednu novú, užitočnú funkciu, hlavne v spojení s <code>for ... in</code>
 cyklom. Volá sa <code>range</code> a môže brať jeden, dva, alebo aj tri argumenty. Vráti
 špeciálnu hodnotu typu 'range', ktorú ale vieme konvertovať do zoznamu pomocou
 funkcie <code>list</code>:</p>
-<pre><code class="language-python">&gt;&gt;&gt; list( range( 10 ) )
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-&gt;&gt;&gt; list( range( 0 ) )
-[]
-&gt;&gt;&gt; list( range( 1 ) )
-[0]
-&gt;&gt;&gt; list( range( 0, 10 ) )
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-&gt;&gt;&gt; list( range( 0, 0 ) )
-[]
-&gt;&gt;&gt; list( range( 3, 5 ) )
-[3, 4]
-&gt;&gt;&gt; list( range( -3, 3 ) )
-[-3, -2, -1, 0, 1, 2]
-&gt;&gt;&gt; list( range( -3, 3, 2 ) )
-[-3, -1, 1]
-&gt;&gt;&gt; list( range( 0, 10, 1 ) )
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-&gt;&gt;&gt; list( range( 0, 10, 3 ) )
-[0, 3, 6, 9]
-&gt;&gt;&gt; list( range( 10, 0, -3 ) )
-[10, 7, 4, 1]
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">10</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">[]</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">[]</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
 <p><code>range(a, b, c)</code> vygeneruje čísla od <code>a</code> (vrátane) do <code>b</code> (vynímajúc) s
 rozdielmi <code>c</code> medzi každými dvomi číslami. Ak použijeme iba dva argumenty, <code>c</code>
 sa nastaví automaticky na jednotku. A ak iba jeden, <code>a</code> sa nastaví na nulu.</p>
 <p>Ak ale použijeme túto funkciu s konštrukciou <code>for ... in</code>, môžme vynechať
 konvertovanie cez <code>list</code>, lebo vie pracovať aj s špeciálnou hodnotou typu
 'range', akú vracia funkcia <code>range</code>.</p>
-<pre><code class="language-python">&gt;&gt;&gt; type( range( 5 ) )
-&lt;class 'range'&gt;
-&gt;&gt;&gt; for i in range( 5 ):
-...     print( i )
-...
-0
-1
-2
-3
-4
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">5</span> <span class="p">)</span> <span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">range</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">5</span> <span class="p">):</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">...</span>     <span class="nb">print</span><span class="p">(</span> <span class="n">i</span> <span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="o">...</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="mi">0</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="mi">1</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="mi">2</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="mi">3</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="mi">4</span>
+</code></pre></div>
 <p><code>for</code> spolu s <code>range</code> častokrát dokáže nahradiť cyklus <code>while</code> a lepšie sa s
 ním pracuje. Ak si spomenieme napr. na náš program kresliaci trojuholníky,
 teraz by sme samotné kreslenie (načítanie veľkosti na vstupe zostáva rovnako)
 vedeli napísať nasledovne:</p>
-<pre><code class="language-python">for row_size in range( size, 0, -1 ):
-    print( row_size * '*' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span> <span class="n">row_size</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="n">size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="n">row_size</span> <span class="o">*</span> <span class="s1">&#39;*&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>A nakresliť opačný trojuholník (so špičkou na vrchu) by bolo podobne jednoduché:</p>
-<pre><code class="language-python">for row_size in range( 1, size + 1 ):
-    print( row_size * '*' )
-</code></pre>
-<hr />
-<p><strong>Úloha</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">for</span> <span class="n">row_size</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">):</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="n">row_size</span> <span class="o">*</span> <span class="s1">&#39;*&#39;</span> <span class="p">)</span>
+</code></pre></div>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Napíšte program, ktorý sa spýta užívateľa na dve čísla. Tie budú znamenať
 veľkosť strán obdĺžnika. Potom pomocou <code>for ... in range</code> vykreslite takýto
 obdĺžnik. Pre veľkosti 4 a 6 by mal vyzerať takto:</p>
-<pre><code class="language-text">######
-#    #
-#    #
-######
-</code></pre>
-<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>######
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>#    #
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>#    #
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>######
+</code></pre></div>
+</details>
 <h2 id="labyrint">Labyrint</h2>
 <p>Poďme si spolu naprogramovať jednoduchú hru. Už máme nejaké skusenosti s
 programovaním, takže pokým sa trochu obmedzíme v našich nárokoch na kvalitu,
@@ -284,120 +531,193 @@ používateľa aby zadal jedno z písmenok:</p>
 </ul>
 <p>Na začiatku si zadefinujeme všetky tieto <em>konštanty</em>, teda premenné, ktoré sa
 nebudú meniť. V Pythone je zvykom písať ich názvy veľkými písmenami.</p>
-<pre><code class="language-python">FIELD = [
-'#############',
-'#  #  ### #X#',
-'# #       # #',
-'# ## ## # # #',
-'#     # #   #',
-'##### #  #  #',
-'#   # #######',
-'# #         #',
-'#############' ]
-
-HEIGHT = len( FIELD )
-WIDTH = len( FIELD[ 0 ] )
-
-END = 'X'
-PLAYER = 'O'
-WALL = '#'
-
-UP = 'w'
-LEFT = 'a'
-DOWN = 's'
-RIGHT = 'd'
-QUIT = 'q'
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">FIELD</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="s1">&#39;#############&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="s1">&#39;#  #  ### #X#&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="s1">&#39;# #       # #&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="s1">&#39;# ## ## # # #&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="s1">&#39;#     # #   #&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="s1">&#39;##### #  #  #&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="s1">&#39;#   # #######&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="s1">&#39;# #         #&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="s1">&#39;#############&#39;</span> <span class="p">]</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="n">HEIGHT</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span> <span class="n">FIELD</span> <span class="p">)</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="n">WIDTH</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span> <span class="n">FIELD</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span> <span class="p">)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="n">END</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="n">PLAYER</span> <span class="o">=</span> <span class="s1">&#39;O&#39;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="n">WALL</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="n">UP</span> <span class="o">=</span> <span class="s1">&#39;w&#39;</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="n">LEFT</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="n">DOWN</span> <span class="o">=</span> <span class="s1">&#39;s&#39;</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="n">RIGHT</span> <span class="o">=</span> <span class="s1">&#39;d&#39;</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="n">QUIT</span> <span class="o">=</span> <span class="s1">&#39;q&#39;</span>
+</code></pre></div></td></tr></table></div>
 <p>Hracie pole si ukladáme ako zoznam textových reťazcov - riadkov. Výška poľa je
 počet riadkov, ktorý vieme zistiť funkciou <code>len</code>. Tiež ju použijeme na zistenie
 šírky, t.j. počet stĺpcov, ktorý sa rovná dĺžke každého (a teda napr. prvého)
 riadku. Na začiatku hráča umiestnime do ľavého dolného rohu. Pamätajme, že
 indexy začínajú nulou.  X-ová súradnica je horizontálna (zľava doprava), y-ová
 je vertikálna (zhora dolu).</p>
-<pre><code class="language-python">INITIAL_X = 1
-INITIAL_Y = 7
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="n">INITIAL_X</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="n">INITIAL_Y</span> <span class="o">=</span> <span class="mi">7</span>
+</code></pre></div></td></tr></table></div>
 <p>Teraz si napíšeme funkciu, ktorá vykreslí hracie pole aj s hráčom. Funkcia bude
 mať dva parametre: aktuálne súradnice hráča. Budeme prechádzať pomocou
 vnoreného <code>for</code> cyklu celé hracie pole po riadkoch, ak na danom políčku stojí
 hráč, vykreslíme jeho znak, inak vykreslíme políčko z hracieho pola. Doteraz
 sme <code>print</code> používali tak, že na konci výstupu vždy vložil znak konca riadku
-(akoby stlačil na konci riadku Enter). To je jeho prednastavené správanie.
+(akoby stlačil na konci riadku <span class="keys"><kbd class="key-enter">Enter</kbd></span>). To je jeho prednastavené správanie.
 Teraz ale nechceme aby bolo každé políčko na svojom vlastnom riadku, chceme ich
 vykresliť hneď vedľa seba. Preto použijeme špeciálny (<em>optional</em>) parameter
 <code>end</code>, kde mu nastavíme znak, ktorý má vykresliť na konci výstupu. Skúste si
-v shelli spustiť napr. <code>print( 'afad', end='###' )</code>. My naozaj nechceme vypísať
+v shelli spustiť napr. <code class="highlight"><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;afad&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;###&#39;</span> <span class="p">)</span></code>. My naozaj nechceme vypísať
 medzi políčkami nič, preto nastavíme tento parameter na prázdny text.</p>
-<pre><code class="language-python">def print_field( player_x, player_y ):
-    for y in range( HEIGHT ):
-        for x in range( WIDTH ):
-            if y == player_y and x == player_x:
-                print( PLAYER, end='' )
-            else:
-                print( FIELD[ y ][ x ], end='' )
-        print()
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span>
+<span class="normal"><a href="#__codelineno-13-31">31</a></span>
+<span class="normal"><a href="#__codelineno-13-32">32</a></span>
+<span class="normal"><a href="#__codelineno-13-33">33</a></span>
+<span class="normal"><a href="#__codelineno-13-34">34</a></span>
+<span class="normal"><a href="#__codelineno-13-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="k">def</span> <span class="nf">print_field</span><span class="p">(</span> <span class="n">player_x</span><span class="p">,</span> <span class="n">player_y</span> <span class="p">):</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a>    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="n">HEIGHT</span> <span class="p">):</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a>        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="n">WIDTH</span> <span class="p">):</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31"></a>            <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="n">player_y</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="n">player_x</span><span class="p">:</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a>                <span class="nb">print</span><span class="p">(</span> <span class="n">PLAYER</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span> <span class="p">)</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a>                <span class="nb">print</span><span class="p">(</span> <span class="n">FIELD</span><span class="p">[</span> <span class="n">y</span> <span class="p">][</span> <span class="n">x</span> <span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span> <span class="p">)</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35"></a>        <span class="nb">print</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 <p>Napíšeme si ešte jednu dôležitú funkciu. Bude načítavať vstup od užívateľa a
 posúvať hráča. Ako vstup zoberie tiež súradnice hráča a vráti 3 hodnoty: nové
 súradnice po posune a logickú hodnotu, či sa má hra ukončiť. Viac ako jednu
 hodnotu sme doteraz nevrátili v žiadnej funkcii, ale je to jednoduché:</p>
-<pre><code class="language-python">def is_valid_command( command ):
-    return command in 'wasdq'
-
-def is_empty( x, y ):
-    return not FIELD[ y ][ x ] == WALL
-
-def move( player_x, player_y ):
-    new_player_x = player_x
-    new_player_y = player_y
-
-    while True:
-        command = input( 'Move &quot;w&quot;, &quot;a&quot;, &quot;s&quot;, &quot;d&quot; or end &quot;q&quot;: ' )
-        if not is_valid_command( command ):
-            print( 'Invalid command' )
-        else:
-            if command == 'w':
-                new_player_y -= 1
-            elif command == 'a':
-                new_player_x -= 1
-            elif command == 's':
-                new_player_y += 1
-            elif command == 'd':
-                new_player_x += 1
-            else: # quit
-                return player_x, player_y, True
-
-            if is_empty( new_player_x, new_player_y ):
-                return new_player_x, new_player_y, False
-            else:
-                print( 'You cannot move there' )
-                new_player_x = player_x
-                new_player_y = player_y
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-37">37</a></span>
+<span class="normal"><a href="#__codelineno-14-38">38</a></span>
+<span class="normal"><a href="#__codelineno-14-39">39</a></span>
+<span class="normal"><a href="#__codelineno-14-40">40</a></span>
+<span class="normal"><a href="#__codelineno-14-41">41</a></span>
+<span class="normal"><a href="#__codelineno-14-42">42</a></span>
+<span class="normal"><a href="#__codelineno-14-43">43</a></span>
+<span class="normal"><a href="#__codelineno-14-44">44</a></span>
+<span class="normal"><a href="#__codelineno-14-45">45</a></span>
+<span class="normal"><a href="#__codelineno-14-46">46</a></span>
+<span class="normal"><a href="#__codelineno-14-47">47</a></span>
+<span class="normal"><a href="#__codelineno-14-48">48</a></span>
+<span class="normal"><a href="#__codelineno-14-49">49</a></span>
+<span class="normal"><a href="#__codelineno-14-50">50</a></span>
+<span class="normal"><a href="#__codelineno-14-51">51</a></span>
+<span class="normal"><a href="#__codelineno-14-52">52</a></span>
+<span class="normal"><a href="#__codelineno-14-53">53</a></span>
+<span class="normal"><a href="#__codelineno-14-54">54</a></span>
+<span class="normal"><a href="#__codelineno-14-55">55</a></span>
+<span class="normal"><a href="#__codelineno-14-56">56</a></span>
+<span class="normal"><a href="#__codelineno-14-57">57</a></span>
+<span class="normal"><a href="#__codelineno-14-58">58</a></span>
+<span class="normal"><a href="#__codelineno-14-59">59</a></span>
+<span class="normal"><a href="#__codelineno-14-60">60</a></span>
+<span class="normal"><a href="#__codelineno-14-61">61</a></span>
+<span class="normal"><a href="#__codelineno-14-62">62</a></span>
+<span class="normal"><a href="#__codelineno-14-63">63</a></span>
+<span class="normal"><a href="#__codelineno-14-64">64</a></span>
+<span class="normal"><a href="#__codelineno-14-65">65</a></span>
+<span class="normal"><a href="#__codelineno-14-66">66</a></span>
+<span class="normal"><a href="#__codelineno-14-67">67</a></span>
+<span class="normal"><a href="#__codelineno-14-68">68</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-37" name="__codelineno-14-37"></a><span class="k">def</span> <span class="nf">is_valid_command</span><span class="p">(</span> <span class="n">command</span> <span class="p">):</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38"></a>    <span class="k">return</span> <span class="n">command</span> <span class="ow">in</span> <span class="s1">&#39;wasdq&#39;</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39"></a>
+<a id="__codelineno-14-40" name="__codelineno-14-40"></a><span class="k">def</span> <span class="nf">is_empty</span><span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">):</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41"></a>    <span class="k">return</span> <span class="ow">not</span> <span class="n">FIELD</span><span class="p">[</span> <span class="n">y</span> <span class="p">][</span> <span class="n">x</span> <span class="p">]</span> <span class="o">==</span> <span class="n">WALL</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42"></a>
+<a id="__codelineno-14-43" name="__codelineno-14-43"></a><span class="k">def</span> <span class="nf">move</span><span class="p">(</span> <span class="n">player_x</span><span class="p">,</span> <span class="n">player_y</span> <span class="p">):</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44"></a>    <span class="n">new_player_x</span> <span class="o">=</span> <span class="n">player_x</span>
+<a id="__codelineno-14-45" name="__codelineno-14-45"></a>    <span class="n">new_player_y</span> <span class="o">=</span> <span class="n">player_y</span>
+<a id="__codelineno-14-46" name="__codelineno-14-46"></a>
+<a id="__codelineno-14-47" name="__codelineno-14-47"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-14-48" name="__codelineno-14-48"></a>        <span class="n">command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span> <span class="s1">&#39;Move &quot;w&quot;, &quot;a&quot;, &quot;s&quot;, &quot;d&quot; or end &quot;q&quot;: &#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-49" name="__codelineno-14-49"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_valid_command</span><span class="p">(</span> <span class="n">command</span> <span class="p">):</span>
+<a id="__codelineno-14-50" name="__codelineno-14-50"></a>            <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Invalid command&#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-51" name="__codelineno-14-51"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-14-52" name="__codelineno-14-52"></a>            <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;w&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-53" name="__codelineno-14-53"></a>                <span class="n">new_player_y</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-14-54" name="__codelineno-14-54"></a>            <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-55" name="__codelineno-14-55"></a>                <span class="n">new_player_x</span> <span class="o">-=</span> <span class="mi">1</span>
+<a id="__codelineno-14-56" name="__codelineno-14-56"></a>            <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-57" name="__codelineno-14-57"></a>                <span class="n">new_player_y</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-14-58" name="__codelineno-14-58"></a>            <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span>
+<a id="__codelineno-14-59" name="__codelineno-14-59"></a>                <span class="n">new_player_x</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-14-60" name="__codelineno-14-60"></a>            <span class="k">else</span><span class="p">:</span> <span class="c1"># quit</span>
+<a id="__codelineno-14-61" name="__codelineno-14-61"></a>                <span class="k">return</span> <span class="n">player_x</span><span class="p">,</span> <span class="n">player_y</span><span class="p">,</span> <span class="kc">True</span>
+<a id="__codelineno-14-62" name="__codelineno-14-62"></a>
+<a id="__codelineno-14-63" name="__codelineno-14-63"></a>            <span class="k">if</span> <span class="n">is_empty</span><span class="p">(</span> <span class="n">new_player_x</span><span class="p">,</span> <span class="n">new_player_y</span> <span class="p">):</span>
+<a id="__codelineno-14-64" name="__codelineno-14-64"></a>                <span class="k">return</span> <span class="n">new_player_x</span><span class="p">,</span> <span class="n">new_player_y</span><span class="p">,</span> <span class="kc">False</span>
+<a id="__codelineno-14-65" name="__codelineno-14-65"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-14-66" name="__codelineno-14-66"></a>                <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;You cannot move there&#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-67" name="__codelineno-14-67"></a>                <span class="n">new_player_x</span> <span class="o">=</span> <span class="n">player_x</span>
+<a id="__codelineno-14-68" name="__codelineno-14-68"></a>                <span class="n">new_player_y</span> <span class="o">=</span> <span class="n">player_y</span>
+</code></pre></div></td></tr></table></div>
 <p>Teraz implementujeme hlavnú logiku. Načítať viacero hodnôt z funkcie je rovnako
 jednoduché.</p>
-<pre><code class="language-python">x = INITIAL_X
-y = INITIAL_Y
-
-end = False
-
-while not end:
-    print_field( x, y )
-    x, y, end = move( x, y )
-    if not end and FIELD[ y ][ x ] == END:
-        print( 'Congratulation!' )
-        end = True
-
-print( 'The game ends' )
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-70">70</a></span>
+<span class="normal"><a href="#__codelineno-15-71">71</a></span>
+<span class="normal"><a href="#__codelineno-15-72">72</a></span>
+<span class="normal"><a href="#__codelineno-15-73">73</a></span>
+<span class="normal"><a href="#__codelineno-15-74">74</a></span>
+<span class="normal"><a href="#__codelineno-15-75">75</a></span>
+<span class="normal"><a href="#__codelineno-15-76">76</a></span>
+<span class="normal"><a href="#__codelineno-15-77">77</a></span>
+<span class="normal"><a href="#__codelineno-15-78">78</a></span>
+<span class="normal"><a href="#__codelineno-15-79">79</a></span>
+<span class="normal"><a href="#__codelineno-15-80">80</a></span>
+<span class="normal"><a href="#__codelineno-15-81">81</a></span>
+<span class="normal"><a href="#__codelineno-15-82">82</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-70" name="__codelineno-15-70"></a><span class="n">x</span> <span class="o">=</span> <span class="n">INITIAL_X</span>
+<a id="__codelineno-15-71" name="__codelineno-15-71"></a><span class="n">y</span> <span class="o">=</span> <span class="n">INITIAL_Y</span>
+<a id="__codelineno-15-72" name="__codelineno-15-72"></a>
+<a id="__codelineno-15-73" name="__codelineno-15-73"></a><span class="n">end</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-15-74" name="__codelineno-15-74"></a>
+<a id="__codelineno-15-75" name="__codelineno-15-75"></a><span class="k">while</span> <span class="ow">not</span> <span class="n">end</span><span class="p">:</span>
+<a id="__codelineno-15-76" name="__codelineno-15-76"></a>    <span class="n">print_field</span><span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">)</span>
+<a id="__codelineno-15-77" name="__codelineno-15-77"></a>    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="n">move</span><span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">)</span>
+<a id="__codelineno-15-78" name="__codelineno-15-78"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">end</span> <span class="ow">and</span> <span class="n">FIELD</span><span class="p">[</span> <span class="n">y</span> <span class="p">][</span> <span class="n">x</span> <span class="p">]</span> <span class="o">==</span> <span class="n">END</span><span class="p">:</span>
+<a id="__codelineno-15-79" name="__codelineno-15-79"></a>        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Congratulation!&#39;</span> <span class="p">)</span>
+<a id="__codelineno-15-80" name="__codelineno-15-80"></a>        <span class="n">end</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-15-81" name="__codelineno-15-81"></a>
+<a id="__codelineno-15-82" name="__codelineno-15-82"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;The game ends&#39;</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <p>Tak, a hra je hotová :) Nezabudnite, že príkaz <code>input</code> vždy čaká na stlačenie
-klávesy "Enter", takže sa hra nedá ovládať plynule ako sme zvyknutí, len
+klávesy <span class="keys"><kbd class="key-enter">Enter</kbd></span>, takže sa hra nedá ovládať plynule ako sme zvyknutí, len
 držaním "w" "a" "s" "d". To by sme mohli ešte vylepšiť, no najbližšie si už
 postavíme svojho prvého robota a rozpohybujeme ho Pythonom! Zároveň
 si postupne budeme ukazovať všeliaké nové užitočné príkazy.</p>
-<p><img alt="Python IDLE" src="../img/L3_robot.png" /></p>
-<hr />
-<p><strong>Úloha</strong></p>
+<p><img alt="Robot" src="../img/L3_robot.png" style="width:30%;height:auto" /></p>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Ak ešte máte chuť trochu popracovať na našej hre, tu je niekoľko návrhov:</p>
 <ol>
 <li>Vytvorte viacero rôznych bludísk, nechajte hráča, aby si z nich vybral.</li>
@@ -409,55 +729,68 @@ si postupne budeme ukazovať všeliaké nové užitočné príkazy.</p>
 <li>Do hry môžete pridať dvere "D" a kľúč "K". Keď hráč zoberie kľúč, dvere sa
    mu otvoria a bude môcť prejsť do cieľa.</li>
 </ol>
-<hr />
+</details>
+
+
+
+
               
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../02/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python: vstup, riadiace štruktúry, zoznam" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Python: vstup, riadiace štruktúry, zoznam
             </div>
           </div>
-          <footer>
+        </a>
+      
+      
+    </nav>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../02/" class="btn btn-neutral" title="Python: vstup, riadiace štruktúry, zoznam"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
   </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <span><a href="../02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
     
-    
-  </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+  </body>
 </html>

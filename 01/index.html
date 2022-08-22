@@ -1,125 +1,461 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="canonical" href="https://example.com/01/">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Úvod do Pythonu - RLLR</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "\u00davod do Pythonu";
-    var mkdocs_page_input_path = "01.md";
-    var mkdocs_page_url = "/01/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Úvod do Pythonu - RLLR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> RLLR</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uvod-do-pythonu" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Úvod do Pythonu</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#python-ako-kalkulacka">Python ako kalkulačka</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#modulo">Modulo</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mocnina">Mocnina</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#premenne">Premenné</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#tlacit">Tlačiť!</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#nas-prvy-program">Náš prvý program</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#preco-si-to-nezopakovat">Prečo si to nezopakovať?</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#logicke-ano-a-nie">Logické áno a nie</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#prikaz-while">Príkaz while</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../02/">Python: vstup, riadiace štruktúry, zoznam</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../03/">Python: funkcie, range, vlastná hra</a>
-                    </li>
-                </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RLLR" class="md-header__button md-logo" aria-label="RLLR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RLLR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Úvod do Pythonu
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">RLLR</a>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RLLR" class="md-nav__button md-logo" aria-label="RLLR" data-md-component="logo">
       
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    RLLR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
     
-    <li>Úvod do Pythonu</li>
-    <li class="wy-breadcrumbs-aside">
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Úvod do Pythonu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Úvod do Pythonu
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-ako-kalkulacka" class="md-nav__link">
+    Python ako kalkulačka
+  </a>
+  
+    <nav class="md-nav" aria-label="Python ako kalkulačka">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulo" class="md-nav__link">
+    Modulo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mocnina" class="md-nav__link">
+    Mocnina
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premenne" class="md-nav__link">
+    Premenné
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tlacit" class="md-nav__link">
+    Tlačiť!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nas-prvy-program" class="md-nav__link">
+    Náš prvý program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preco-si-to-nezopakovat" class="md-nav__link">
+    Prečo si to nezopakovať?
+  </a>
+  
+    <nav class="md-nav" aria-label="Prečo si to nezopakovať?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logicke-ano-a-nie" class="md-nav__link">
+    Logické áno a nie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prikaz-while" class="md-nav__link">
+    Príkaz while
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
-  </ul>
   
-  <hr/>
-</div>
 
-          <div role="main">
-            <div class="section">
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02/" class="md-nav__link">
+        Python: vstup, riadiace štruktúry, zoznam
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03/" class="md-nav__link">
+        Python: funkcie, range, vlastná hra
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
               
-                <h1 id="uvod-do-pythonu">Úvod do Pythonu</h1>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-ako-kalkulacka" class="md-nav__link">
+    Python ako kalkulačka
+  </a>
+  
+    <nav class="md-nav" aria-label="Python ako kalkulačka">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modulo" class="md-nav__link">
+    Modulo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mocnina" class="md-nav__link">
+    Mocnina
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premenne" class="md-nav__link">
+    Premenné
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tlacit" class="md-nav__link">
+    Tlačiť!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nas-prvy-program" class="md-nav__link">
+    Náš prvý program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preco-si-to-nezopakovat" class="md-nav__link">
+    Prečo si to nezopakovať?
+  </a>
+  
+    <nav class="md-nav" aria-label="Prečo si to nezopakovať?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logicke-ano-a-nie" class="md-nav__link">
+    Logické áno a nie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prikaz-while" class="md-nav__link">
+    Príkaz while
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="uvod-do-pythonu">Úvod do Pythonu</h1>
 <p><a href="https://www.python.org/">Python</a> je jeden z mnohých <em>programovacích jazykov</em>.
 Tak ako ľudia medzi sebou sa rozprávame spoločným jazykom, potrebujeme sa
 naučiť nový jazyk, ktorému rozumie počítač či robot. Tak mu budeme vedieť
@@ -135,30 +471,30 @@ prečíta riadok za riadkom a vykoná ich. Hovoríme tiež, že ich <em>interpre
 okne, ktoré sa nám otvorilo, môžeme zadávať jednotlivé príkazy. Na poslednom
 riadku vidíme tzv. <em>prompt</em>: <code>&gt;&gt;&gt;</code>. Označuje, že program je pripravený počúvať
 na naše príkazy. Dokáže napr. fungovať ako kalkulačka, stačí hneď za prompt
-napísať jednoduchý príklad a stlačiť <code>Enter</code>.</p>
-<pre><code class="language-python">&gt;&gt;&gt; 40 + 2
-42
-&gt;&gt;&gt; 30 - 5 * 8
--10
-</code></pre>
+napísať jednoduchý príklad a stlačiť <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="mi">42</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">30</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">8</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">-</span><span class="mi">10</span>
+</code></pre></div>
 <p>Znak <code>*</code> znamená násobenie. Vidíme, že Python pozná základné matematické
 pravidlá, najprv vypočítal násobenie, až potom odčítanie. Ak by sme ho predsa
 len chceli presvedčiť, aby najprv odčítal, použijeme zátvorky. Rovnako ako v
 matematike. S tým rozdielom, že musíme použiť okrúhle zátvorky <code>()</code>, tie
 ostatné (<code>[]{}</code>) majú pre Python iný význam a len by sme ho poplietli.</p>
-<pre><code class="language-python">&gt;&gt;&gt; (30 - 5) * 8
-200
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">30</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="mi">200</span>
+</code></pre></div>
 <p>Pozrime sa na delenie:</p>
-<pre><code class="language-python">&gt;&gt;&gt; 40 / 5
-8.0
-&gt;&gt;&gt; 40 // 5
-8
-&gt;&gt;&gt; 40 / 7
-5.714285714285714
-&gt;&gt;&gt; 40 // 7
-5
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">/</span> <span class="mi">5</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="mf">8.0</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">//</span> <span class="mi">5</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="mi">8</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">/</span> <span class="mi">7</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="mf">5.714285714285714</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">//</span> <span class="mi">7</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="mi">5</span>
+</code></pre></div>
 <p>V Pythone sa rozlišujú dva typy delenia:</p>
 <ol>
 <li><code>/</code> je klasické delenie ako ho poznáme,</li>
@@ -166,27 +502,30 @@ ostatné (<code>[]{}</code>) majú pre Python iný význam a len by sme ho popli
    najviac sa zmestí deliteľ do delenca celý. <code>7 * 5 = 35</code>, všetko je ešte v
    poriadku, ale <code>7 * 6 = 42</code>, a to je už viac než 40, preto <code>40 // 7 = 5</code>.</li>
 </ol>
-<p>(Presnejšie, je to delenie <code>/</code> nasledované zaokrúhlením nadol)</p>
+<details class="note" open="open">
+<summary>Poznámka</summary>
+<p>Presnejšie, <code>//</code> je delenie <code>/</code> nasledované zaokrúhlením nadol.</p>
+</details>
 <p>Ukážeme si ešte dve matematické špeciality.</p>
 <h3 id="modulo">Modulo</h3>
 <p>Alebo inak: zvyšok po celočíselnom delení. Je to tá časť, ktorá nám ešte chýba,
 keď použijeme celočíselné delenie <code>//</code> namiesto <code>/</code>. Pre túto operáciu sa používa znak
 <code>%</code>.</p>
-<pre><code class="language-python">&gt;&gt;&gt; 40 % 7
-5
-&gt;&gt;&gt; 40 % 5
-0
-&gt;&gt;&gt; 40 // 7 * 7 + 40 % 7
-40
-</code></pre>
-<hr />
-<p><strong>Úloha</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">%</span> <span class="mi">7</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="mi">5</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">%</span> <span class="mi">5</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="mi">0</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">40</span> <span class="o">//</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">40</span> <span class="o">%</span> <span class="mi">7</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="mi">40</span>
+</code></pre></div>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Prečo posledný príklad vyšiel práve 40? Fungovalo by to aj s inými číslami?
 Napr. s trojkou:</p>
-<pre><code class="language-python">&gt;&gt;&gt; 3 // 7 * 7 + 3 % 7
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">//</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">%</span> <span class="mi">7</span>
+</code></pre></div>
 <p>Bude výsledok 3? Platí to pre všetky čísla?</p>
-<hr />
+</details>
 <p>Na poslednom príklade sa vám možno nepozdáva, že sme nepoužli žiadne zátvorky.
 Nemuseli sme, lebo násobenie, delenie aj modulo majú rovnakú <em>prioritu</em>.
 Sčítanie a odčítanie majú od nich menšiu prioritu, takže sa vyhodnotia neskôr.
@@ -194,30 +533,30 @@ To už vieme, keď sme toto správanie zmenili použitím zátvoriek. No a pri
 viacerých operáciach rovnakej priority za sebou, Python ich vyhodnocuje zľava
 doprava. Znovu ako v matematike.</p>
 <p>Takže tento príklad sa interpretuje akoby bol uzátvorkovaný takto:</p>
-<pre><code class="language-python">&gt;&gt;&gt; ((40 // 7) * 7) + (40 % 7)
-40
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">((</span><span class="mi">40</span> <span class="o">//</span> <span class="mi">7</span><span class="p">)</span> <span class="o">*</span> <span class="mi">7</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">40</span> <span class="o">%</span> <span class="mi">7</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="mi">40</span>
+</code></pre></div>
 <h3 id="mocnina">Mocnina</h3>
 <p>Pripomeňme si, že mocnina je opakované násobenie.<br />
 2<sup>3</sup> = 2 * 2 * 2 = 8</p>
 <p>V Pythone používame na umocňovanie operátor <code>**</code>:</p>
-<pre><code class="language-python">&gt;&gt;&gt; 2 ** 3
-8
-&gt;&gt;&gt; 4 ** 1
-4
-&gt;&gt;&gt; 1 ** 1000000000
-1
-&gt;&gt;&gt; 5 ** 0
-1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="mi">8</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">**</span> <span class="mi">1</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="mi">4</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">**</span> <span class="mi">1000000000</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="mi">1</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">**</span> <span class="mi">0</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="mi">1</span>
+</code></pre></div>
 <p>Umocňovanie má ešte väčšiu prioritu než násobenie.</p>
-<pre><code class="language-python">&gt;&gt;&gt; 4 * 2 ** 3
-32
-&gt;&gt;&gt; (4 * 2) ** 3
-512
-</code></pre>
-<hr />
-<p><strong>Úloha</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="mi">32</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="mi">512</span>
+</code></pre></div>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Aký je výsledok nasledujúcich matematických výrazov? Overte si správnu odpoveď
 využitím Python IDLE.</p>
 <ul>
@@ -228,148 +567,154 @@ využitím Python IDLE.</p>
 <li><code>5 / -3</code></li>
 <li><code>5 // -3 * 3 + 5 % -3</code></li>
 </ul>
-<hr />
+</details>
 <h3 id="premenne">Premenné</h3>
 <p>Pri zložitejších výpočtoch si často chceme uložiť medzivýsledok. Moderné
 kalkulačky to zvládnu a Python IDLE tiež!</p>
-<pre><code class="language-python">&gt;&gt;&gt; x = 4 + 8
-&gt;&gt;&gt; x
-12
-&gt;&gt;&gt; 2 * x
-24
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">8</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="mi">12</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="mi">24</span>
+</code></pre></div>
 <p>Príkaz <code>x = 4 + 8</code> znamená priradenie hodnoty na pravej strane (<code>4 + 8</code>) do
 <em>premennej</em> na ľavej strane (<code>x</code>). Najprv Python vypočíta <code>4 + 8</code>. Potom si na
 miesto v pamäti, kde má uložený výsledok, nalepí poznámku "x". Je to názov
 novej premennej, aby si pamätal kam sa má pozrieť, keď ju uvidí v našich
 príkazoch nabudúce.  Napr. <code>2 * x</code> -&gt; <code>2 * 12</code> -&gt; <code>24</code>.</p>
-<p><img alt="premenná" src="../img/L1_x.png" /></p>
+<p><img alt="premenná" src="../img/L1_x.png" style="width:50%;height:auto" /></p>
 <p>Názvy môžu byť aj viacpísmenkové, môžu obsahovať veľké aj malé znaky, tiež
 cifry (ale cifra nemôže stáť na začiatku mena) a podtržítko ("_").</p>
 <p>Čo sa stane ak budeme chcieť ukázať hodnotu premennej, ktorú Python ešte
 nepozná?</p>
-<pre><code class="language-python">&gt;&gt;&gt; y
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-NameError: name 'y' is not defined
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;y&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</code></pre></div>
 <p>Všimnime si posledný riadok. Hovorí nám, že názov "y" nie je definovaný, inými
 slovami, nepozná ho, nevie kam sa pozrieť.</p>
-<hr />
-<p><strong>Úloha</strong></p>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Čo je výsledkom nasledujúcej postupnosti príkazov?</p>
-<pre><code class="language-python">&gt;&gt;&gt; a = 3
-&gt;&gt;&gt; b = 2
-&gt;&gt;&gt; a = a + b
-&gt;&gt;&gt; b = a - b
-&gt;&gt;&gt; a = a - b
-&gt;&gt;&gt; a
-?
-&gt;&gt;&gt; b
-?
-</code></pre>
-<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="err">?</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="err">?</span>
+</code></pre></div>
+</details>
 <p>Aby sme si skratili zápis, namiesto</p>
-<pre><code class="language-python">&gt;&gt;&gt; a = a + b
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></div>
 <p>môžme používať</p>
-<pre><code class="language-python">&gt;&gt;&gt; a += b
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+=</span> <span class="n">b</span>
+</code></pre></div>
 <p>Význam je ten istý. Rovnako existuje <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>//=</code>, <code>%=</code>, <code>**=</code>.
 Vyskúšajte si použiť niektoré z nich.</p>
 <h2 id="tlacit">Tlačiť!</h2>
 <p>V tejto časti si ukážeme nový príkaz. Volá sa "print". Z angličtiny vieme
 odhadnúť, na čo bude slúžiť. Vypíše text na obrazovku. Zatiaľ sme pracovali len
-s číslami, ešte nie z textom. V Pythone sa text píše medzi úvodzovky (").
-Pozor, ak napíšeme text bez úvodzoviek, interpretuje sa to ako názov, ktorý
+s číslami, ešte nie z textom. V Pythone sa text píše medzi úvodzovky (").</p>
+<div class="admonition warning">
+<p class="admonition-title">Pozor!</p>
+<p>Ak napíšeme text bez úvodzoviek, interpretuje sa to ako názov, ktorý
 bude Python hľadať a pravdepodobne dostaneme podobnú sťažnosť ako naposledy
 (hovorí sa im <em>chybové hlášky</em>).</p>
-<pre><code class="language-python">&gt;&gt;&gt; print( &quot;Ahoj&quot; )
-Ahoj
-&gt;&gt;&gt; print( Ahoj )
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-NameError: name 'Ahoj' is not defined
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Ahoj&quot;</span> <span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">Ahoj</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">Ahoj</span> <span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;Ahoj&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</code></pre></div>
+</div>
 <p>Namiesto dvojitých úvodzoviek sa dajú použiť aj jednoduché (').</p>
-<pre><code class="language-python">&gt;&gt;&gt; print( 'Cau' )
-Cau
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Cau&#39;</span> <span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">Cau</span>
+</code></pre></div>
 <p>Text síce nie je číslo, ale v Pythone dokážeme text sčítavať a dokonca aj
 násobiť!</p>
-<pre><code class="language-python">&gt;&gt;&gt; print( 'Ahoj ' + 'Robo' + 'Lab' )
-Ahoj RoboLab
-&gt;&gt;&gt; print( 'tra' + 'la' * 3 )
-tralalala
-&gt;&gt;&gt; print( 3 + ' jablka' )
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Ahoj &#39;</span> <span class="o">+</span> <span class="s1">&#39;Robo&#39;</span> <span class="o">+</span> <span class="s1">&#39;Lab&#39;</span> <span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">Ahoj</span> <span class="n">RoboLab</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;tra&#39;</span> <span class="o">+</span> <span class="s1">&#39;la&#39;</span> <span class="o">*</span> <span class="mi">3</span> <span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">tralalala</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="mi">3</span> <span class="o">+</span> <span class="s1">&#39; jablka&#39;</span> <span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">+</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span> <span class="ow">and</span> <span class="s1">&#39;str&#39;</span>
+</code></pre></div>
 <p>Sčítať text a číslo sa už nedá. To presne nám povie chybová hláška na poslednom
 riadku: operátor <code>+</code> nefunguje s číslom (ang. <strong>int</strong>eger) a textom (ang.
 character <strong>str</strong>ing). Ak potrebujeme vypísať v jednom príkaze text a zároveň
 aj číslo, môžme ich oddeliť čiarkou. Python medzi ne automaticky vloží medzeru.</p>
-<pre><code class="language-python">&gt;&gt;&gt; pocet = 3
-&gt;&gt;&gt; print( pocet )
-3
-&gt;&gt;&gt; print( 'Mam', pocet, 'jablka' )
-Mam 3 jablka
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">pocet</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="n">pocet</span> <span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="mi">3</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Mam&#39;</span><span class="p">,</span> <span class="n">pocet</span><span class="p">,</span> <span class="s1">&#39;jablka&#39;</span> <span class="p">)</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">Mam</span> <span class="mi">3</span> <span class="n">jablka</span>
+</code></pre></div>
 <p>Takže <code>print</code> funguje aj s číslami, nielen textom! Pozor, môže sa zdať, že
 nasledujúce riadky spravia to isté, ale nie je to celkom tak. Za chvíľu si o
 tom povieme viac.</p>
-<pre><code class="language-python">&gt;&gt;&gt; 3
-3
-&gt;&gt;&gt; print( 3 )
-3
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="mi">3</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span> <span class="mi">3</span> <span class="p">)</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="mi">3</span>
+</code></pre></div>
 <h2 id="nas-prvy-program">Náš prvý program</h2>
 <p>Python IDLE obsahuje dve časti. Jednu z nich, <em>príkazový riadok</em> (tiež
 <em>shell</em>), sme používali doteraz. Slúži na vykonávanie jednotlivých príkazov,
 ale naše programy v budúcnosti budú omnoho dlhšie, pozostávajúc z niekoľko
 desiatok, aj stoviek riadkov. Tu nám pomôže druhá časť: <em>editor</em>. Otvoríme ho
 cez "File" -&gt; "New". Napíšme doň náš prvý program:</p>
-<pre><code class="language-python">print( 'Ahoj', 'RoboLab' )
-print( 'RoboLab zdravi' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Ahoj&#39;</span><span class="p">,</span> <span class="s1">&#39;RoboLab&#39;</span> <span class="p">)</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;RoboLab zdravi&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Používame to, čo sme sa už naučili, ale tentokrát nepíšeme naše príkazy do
 príkazového riadku a nevykonajú sa hneď. Keď chceme spustiť program, stlačíme
-kláves "F5". IDLE nás vyzve aby sme si program uložili a potom ho spustí v okne
+kláves <span class="keys"><kbd class="key-f5">F5</kbd></span>. IDLE nás vyzve aby sme si program uložili a potom ho spustí v okne
 príkazového riadku. Mali by sme zbadať vypísané:</p>
-<pre><code class="language-text">Ahoj RoboLab
-RoboLab zdravi
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Ahoj RoboLab
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>RoboLab zdravi
+</code></pre></div>
 <p>Vráťme sa teraz k problému vypisovania čísel. Keď spustíme jednoduchý program,</p>
-<pre><code class="language-python">print( 3 * 5 )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">print</span><span class="p">(</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="p">)</span>
+</code></pre></div>
 <p>na výstupe sa nám zobrazí <code>15</code>. Skúste si to! Správne, Python najprv vypočíta
 "3 * 5 = 15" a následne výsledok príkazom <code>print</code> vypíše na obrazovku. Skúsme
 teraz spustiť program bez príkazu <code>print</code>.</p>
-<pre><code class="language-python">3 * 5
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span>
+</code></pre></div>
 <p>Na výstupe sa nám nič nezobrazí! Prečo? Python znovu vyhodnotí "3 * 5 = 15",
 ale tento <strong>výsledok</strong> sa stratí, nemá žiadny príkaz, aby ho vypísal.
 Príkazový riadok nám vždy aj ukáže <strong>výsledok</strong> toho, čo mu zadáme.</p>
-<pre><code class="language-python">&gt;&gt;&gt; 3 * 5
-15
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="mi">15</span>
+</code></pre></div>
 <p>Ale ak chceme niečo vypísať z <strong>programu</strong>, vždy musíme použiť príkaz <code>print</code>!</p>
-<p>(V ukážkach na týchto stránkach odlíšime príkazový riadok jednoducho:
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>V ukážkach na týchto stránkach odlíšime príkazový riadok jednoducho:
 začína tromi väčšítkami <code>&gt;&gt;&gt;</code>. Ak tam nie sú, znamená to, že daná ukážka je
-<strong>program</strong>, a teda ho treba napísať do editoru.)</p>
+<strong>program</strong>, a teda ho treba napísať do editoru.</p>
+</div>
 <h2 id="preco-si-to-nezopakovat">Prečo si to nezopakovať?</h2>
 <p>Doteraz bol Python celkom nudný. Keď sme chceli, aby nám niečo napísal, museli
 sme mu to sami napísať a ešte k tomu naviac dopísať "print". Na čo nám je taký
 Python? Ukážme si teda, že je silnejší, než sa zdá. Spustite si tento program.
 Predposledné dva riadky začínajú štyrmi medzerami a namiesto štyroch stlačení
-medzerníka môžeme použiť kláves "tabulátor".</p>
-<pre><code class="language-python">i = 0
-while i &lt; 3:
-    print( 'tra' + 'la' * i )
-    i += 1
-print( 'koniec' )
-</code></pre>
+medzerníka môžeme použiť kláves <span class="keys"><kbd class="key-tab">Tab</kbd></span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;tra&#39;</span> <span class="o">+</span> <span class="s1">&#39;la&#39;</span> <span class="o">*</span> <span class="n">i</span> <span class="p">)</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;koniec&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Zdá sa, že sme použili nový príkaz: <code>while</code>. Aby sme mu porozumeli, musíme si
 najprv povedať niečo o ne/pravdách v Pythone.</p>
 <h3 id="logicke-ano-a-nie">Logické áno a nie</h3>
@@ -378,17 +723,17 @@ a číselnými hodnotami, teraz si ukážeme logické hodnoty (ang. <em>boolean<
 matematika <a href="https://sk.wikipedia.org/wiki/George_Boole">Georgea Boolea</a>).
 Existujú len dve: <code>True</code> (pravda) a <code>False</code> (nepravda). V počítačoch je všetko
 jasné, buď to je jednoducho pravdivé alebo nie je.</p>
-<pre><code class="language-python">&gt;&gt;&gt; 1 &lt; 2
-True
-&gt;&gt;&gt; 3 &lt; -5
-False
-&gt;&gt;&gt; 2 == 2
-True
-&gt;&gt;&gt; 2 &gt;= 1
-True
-&gt;&gt;&gt; 2 &gt;= 2
-True
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="kc">True</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">5</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="kc">False</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="kc">True</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">1</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="kc">True</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="kc">True</span>
+</code></pre></div>
 <p>Máme celkovo 6 <em>porovnávacích operátorov</em>:</p>
 <table>
 <thead>
@@ -424,77 +769,80 @@ True
 </tr>
 </tbody>
 </table>
-<p><strong>POZOR:</strong> Ak chceme porovnávať, používame <code>==</code> (dva znaky "="), ale ak
+<div class="admonition warning">
+<p class="admonition-title">Pozor!</p>
+<p>Ak chceme porovnávať, používame <code>==</code> (dva znaky "="), ale ak
 priraďujeme hodnotu do premennej, používame len <code>=</code> (jeden znak "=").</p>
-<pre><code class="language-python">&gt;&gt;&gt; a = 1
-&gt;&gt;&gt; a == 1
-True
-</code></pre>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="kc">True</span>
+</code></pre></div>
 <p>Porovnávať nemusíme len čísla:</p>
-<pre><code class="language-python">&gt;&gt;&gt; 'text' != 'text'
-False
-&gt;&gt;&gt; 2 == 'text'
-False
-&gt;&gt;&gt; 2 == '2'
-False
-&gt;&gt;&gt; 2 &lt; 'text'
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-TypeError: '&lt;' not supported between instances of 'int' and 'str'
-&gt;&gt;&gt; 'text' &lt; 'text'
-False
-&gt;&gt;&gt; 'a' &lt; 'b'
-True
-&gt;&gt;&gt; 'a' &lt; 'aa'
-True
-&gt;&gt;&gt; 'ab' &lt;= 'aa'
-False
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;text&#39;</span> <span class="o">!=</span> <span class="s1">&#39;text&#39;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kc">False</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">==</span> <span class="s1">&#39;text&#39;</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="kc">False</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="kc">False</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="s1">&#39;text&#39;</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;&lt;&#39;</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">between</span> <span class="n">instances</span> <span class="n">of</span> <span class="s1">&#39;int&#39;</span> <span class="ow">and</span> <span class="s1">&#39;str&#39;</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;text&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;text&#39;</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="kc">False</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;a&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;b&#39;</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a><span class="kc">True</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;a&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;aa&#39;</span>
+<a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a><span class="kc">True</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;ab&#39;</span> <span class="o">&lt;=</span> <span class="s1">&#39;aa&#39;</span>
+<a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a><span class="kc">False</span>
+</code></pre></div>
 <p>Textové reťazce sa porovnávajú <em>lexikograficky</em>. To znamená, ak nejaké slovo
 nájdeme v abecednom zozname skôr než nejaké druhé slovo, tak to prvé bude
 menšie. Číslo sa nikdy nebude rovnať žiadnemu textu a dokonca na menšie/vačšie
 sa ani nemôžeme spýtať.</p>
-<pre><code class="language-python">&gt;&gt;&gt; False == False
-True
-&gt;&gt;&gt; False == 0
-True
-&gt;&gt;&gt; True == 1
-True
-&gt;&gt;&gt; False &lt; True
-True
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="o">==</span> <span class="kc">False</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="kc">True</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="o">==</span> <span class="mi">0</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="kc">True</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="o">==</span> <span class="mi">1</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="kc">True</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span> <span class="o">&lt;</span> <span class="kc">True</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="kc">True</span>
+</code></pre></div>
 <p>Logické hodnoty sa správajú ako čísla, pričom <code>False</code> je nula a <code>True</code>
 jednotka.</p>
-<pre><code class="language-python">&gt;&gt;&gt; True + True
-2
-&gt;&gt;&gt; True * False
-0
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="o">+</span> <span class="kc">True</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="mi">2</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span> <span class="o">*</span> <span class="kc">False</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="mi">0</span>
+</code></pre></div>
 <hr />
 <p>V Pythone má každá premenná (a každá hodnota) nejaký typ (<em>dátový typ</em>).
 Dokážeme ho zistiť pomocou príkazu <code>type</code>:</p>
-<pre><code class="language-python">&gt;&gt;&gt; type( 3 )
-&lt;class 'int'&gt;
-&gt;&gt;&gt; type( 'text' )
-&lt;class 'str'&gt;
-&gt;&gt;&gt; type( True )
-&lt;class 'bool'&gt;
-&gt;&gt;&gt; a = False
-&gt;&gt;&gt; type( a )
-&lt;class 'bool'&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="mi">3</span> <span class="p">)</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="s1">&#39;text&#39;</span> <span class="p">)</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="kc">True</span> <span class="p">)</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="n">a</span> <span class="p">)</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
 <p>S presným významom slovíčka <code>class</code> si zatiaľ nebudeme lámať hlavu, stačí si
 zapamätať, že každá hodnota má nejaký jednoznačný typ.</p>
 <hr />
 <h3 id="prikaz-while">Príkaz <code>while</code></h3>
 <p>Teraz už budeme vedieť použiť príkaz <code>while</code> (nazýva sa tiež <em>cyklus</em>):</p>
-<pre><code class="language-python">while &quot;podmienka&quot;:
-    &quot;príkaz 1&quot;
-    &quot;príkaz 2&quot;
-    ...
-&quot;príkaz 3&quot;
-...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">while</span> <span class="s2">&quot;podmienka&quot;</span><span class="p">:</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    <span class="s2">&quot;príkaz 1&quot;</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>    <span class="s2">&quot;príkaz 2&quot;</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    <span class="o">...</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="s2">&quot;príkaz 3&quot;</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="o">...</span>
+</code></pre></div>
 <p>"while" znamená po anglicky "pokým". A tak mu Python aj rozumie. Pokým je
 "podmienka" pravdivá, teda <code>True</code>, tak bude postupne vykonávať "príkaz 1",
 "príkaz 2", ..., všetko, čo je odsadené o štyri medzery vpravo (týmto príkazom
@@ -502,54 +850,54 @@ hovoríme <em>telo cyklu</em>). Keď príde na koniec, znovu sa spýta, či je "
 pravdivá, ak áno, vykoná znovu telo cyklu. A tak stále dokola. Keď už
 "podmienka" pravdivá nebude, Python skočí na "príkaz 3" a pokračuje ďalej.</p>
 <p>Vyskúšajme si spraviť nekonečný cyklus. Napíšeme takýto jednoduchý program:</p>
-<pre><code class="language-python">while 1 == 1:
-    print( 'ahoj' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">while</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;ahoj&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Spustíme, a keďže <code>1 == 1</code> sa vždy vyhodnotí na <code>True</code>, tak máme celú obrazovku
 "ahoj"ov. Program môžme zastaviť klávesovou kombináciou Ctrl+C. Rovnako by sme
 mohli napísať:</p>
-<pre><code class="language-python">while True:
-    print( 'ahoj' )
-</code></pre>
-<hr />
-<p><strong>Úloha</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;ahoj&#39;</span> <span class="p">)</span>
+</code></pre></div>
+<details class="question" open="open">
+<summary>Úloha</summary>
 <p>Čo vypíše nasledujúci program?</p>
-<pre><code class="language-python">while False:
-    print( 'ahoj' )
-print( 'koniec' )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">while</span> <span class="kc">False</span><span class="p">:</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;ahoj&#39;</span> <span class="p">)</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;koniec&#39;</span> <span class="p">)</span>
+</code></pre></div>
 <p>Najprv skúste na to prísť sami, odpoveď si potom overte spustením.</p>
-<hr />
+</details>
 <p>Vieme už dosť na to, aby sme si napísali trochu zaujímavejší program. Budeme
 "kresliť" trojuholníky z hviezdičiek (*). Od teraz budeme písať zdrojový kód
 po anglicky. Nebudú sa nám miešať slovenské a anglické slová (napr.
-<code>print( 'jablko' )</code>), a keď vytvoríme nejaký úžasný program, budeme sa môcť oň
+<code class="highlight"><span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;jablko&#39;</span> <span class="p">)</span></code>), a keď vytvoríme nejaký úžasný program, budeme sa môcť oň
 podeliť s celým svetom!</p>
 <p>Ako chceme aby vyzerali trojuholníky z hviezdičiek? Najmenší trojuholník
 veľkosti 1 je jednoduchý:</p>
-<pre><code class="language-text">*
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>*
+</code></pre></div>
 <p>Veľkosť dva:</p>
-<pre><code class="language-text">**
-*
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>**
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>*
+</code></pre></div>
 <p>Veľkosť 4:</p>
-<pre><code class="language-text">****
-***
-**
-*
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>****
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>***
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>**
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>*
+</code></pre></div>
 <p>Už máme predstavu, čo chceme naprogramovať, takže pustime sa do toho.
 Potrebujeme vedieť, aký veľký trojuholník chceme.</p>
-<pre><code class="language-python">size = 3
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">size</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
 <p>Vidíme, že trojuholník je nakreslený na toľko isto riadkov aká je jeho veľkosť.</p>
-<pre><code class="language-python">size = 3
-
-while size &gt; 0:
-    # print one row
-    size -= 1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">size</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>    <span class="c1"># print one row</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>    <span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
 <p>Na miesto <code># print one row</code> napíšeme kód, ktorý to vykoná, zatiaľ sme si to len
 poznačili. Takáto časť v zdrojovom kóde sa nazýva <em>komentár</em>. Začína sa znakom
 "#" a pokračuje až do konca riadku. Komentáre Python ignoruje, sú to poznámky
@@ -565,98 +913,128 @@ telo cyklu sa nezopakuje.</p>
 <p>Celkovo sa teda cyklus zopakoval 3 krát. Presne to sme chceli! Zostáva nám v
 každom opakovaní vykresliť jeden riadok. Na prvom riadku chceme mať 3
 hviezdičky. Na druhom 2 a na poslednom jednu.</p>
-<pre><code class="language-python">size = 3
-
-while size &gt; 0:
-    print( '*' * size )
-    size -= 1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">size</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="k">while</span> <span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">size</span> <span class="p">)</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>    <span class="n">size</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
 <p>Hurá a je to! Teraz stačí zmeniť v prvom riadku "size" na veľkosť akú chceme a
 Python nám vykreslí žiadaný trojuholník. Vyskúšajte si rôzne veľkosti.</p>
-<hr />
-<p><strong>Úloha 1.</strong></p>
+<details class="question" open="open">
+<summary>Úloha 1</summary>
 <p>Napíšte program podobný tomu poslednému, ktorý bude kresliť štvorce.</p>
-<p><strong>Úloha 2.</strong></p>
+</details>
+<details class="question" open="open">
+<summary>Úloha 2</summary>
 <p>Napíšte program kresliaci trojuholníky, ale naopak ako doteraz. Teda, pre
 veľkosť 4 bude vyzerať:</p>
-<pre><code class="language-text">*
-**
-***
-****
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>*
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>**
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>***
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>****
+</code></pre></div>
 <p>Toto je už trochu ťažšia úloha, vyžaduje použiť až dve premenné. "size" sa
 tentokrát meniť nebude, ale druhá premenná bude mať postupne hodnoty od 1 až po
 "size", takže budete vedieť jednoducho vykresliť hviezdičky na každom riadku
 podľa nej. Premyslite si to dobre.</p>
-<p><strong>Úloha 3.</strong></p>
+</details>
+<details class="question" open="open">
+<summary>Úloha 3</summary>
 <p>Napíšte program, ktorý vykreslí obdĺžnik. Na začiatku budú teda dve premenné:
 jedna pre veľkosť každej strany.</p>
-<p><strong>Úloha 4.</strong></p>
+</details>
+<details class="question" open="open">
+<summary>Úloha 4</summary>
 <p>Pozor, toto je veľmi tvrdý oriešok! Napíšte program, tentokrát kresliaci
 pyramídu. Tu sú vzory pre veľkosti 1, 2 a 4:</p>
-<pre><code class="language-text">*
-</code></pre>
-<pre><code class="language-text"> *
-***
-</code></pre>
-<pre><code class="language-text">   *
-  ***
- *****
-*******
-</code></pre>
-<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>*
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a> *
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>***
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>   *
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>  ***
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a> *****
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>*******
+</code></pre></div>
+</details>
+
+
+
+
               
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
             </div>
           </div>
-          <footer>
+        </a>
+      
+      
+        
+        <a href="../02/" class="md-footer__link md-footer__link--next" aria-label="Next: Python: vstup, riadiace štruktúry, zoznam" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Python: vstup, riadiace štruktúry, zoznam
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../02/" class="btn btn-neutral float-right" title="Python: vstup, riadiace štruktúry, zoznam">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
   </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
     
-    
-      <span><a href="../02/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+  </body>
 </html>
