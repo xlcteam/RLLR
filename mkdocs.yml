@@ -1,11 +1,15 @@
 site_name: RLLR
-theme: material
+theme:
+  name: material
+  logo: img/logo_head.png
+  favicon: img/logo_icon.png
+
 nav:
-    - Home: index.md
-    - 01.md
-    - 02.md
-    - 03.md
-    - 04.md
+  - Home: index.md
+  - 01.md
+  - 02.md
+  - 03.md
+  - 04.md
 
 markdown_extensions:
   - pymdownx.highlight:
