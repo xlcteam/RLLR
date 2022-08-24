@@ -1,0 +1,709 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../img/logo_icon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Prvý robot - RLLR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prvy-robot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RLLR" class="md-header__button md-logo" aria-label="RLLR" data-md-component="logo">
+      
+  <img src="../img/logo_head.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RLLR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prvý robot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RLLR" class="md-nav__button md-logo" aria-label="RLLR" data-md-component="logo">
+      
+  <img src="../img/logo_head.png" alt="logo">
+
+    </a>
+    RLLR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01/" class="md-nav__link">
+        Úvod do Pythonu
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02/" class="md-nav__link">
+        Python: vstup, riadiace štruktúry, zoznam
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03/" class="md-nav__link">
+        Python: funkcie, range, vlastná hra
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Prvý robot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Prvý robot
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#priprava-ev3-kocky" class="md-nav__link">
+    Príprava EV3-kocky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priprava-pocitacu" class="md-nav__link">
+    Príprava počítaču
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpred" class="md-nav__link">
+    Vpred!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vysvetlenie-kodu" class="md-nav__link">
+    Vysvetlenie kódu
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#priprava-ev3-kocky" class="md-nav__link">
+    Príprava EV3-kocky
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priprava-pocitacu" class="md-nav__link">
+    Príprava počítaču
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpred" class="md-nav__link">
+    Vpred!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vysvetlenie-kodu" class="md-nav__link">
+    Vysvetlenie kódu
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="prvy-robot">Prvý robot</h1>
+<p>Dnes si postavíme a naprogramujeme našeho prvého LEGO robota! Bude mať dva
+motory aby sa vedel pohybovať a <em>EV3-kocku</em> (<em>EV3 brick</em>), ktorá je takým mozgom
+celého robota, bude riadiť motory, ktoré pripojíme do nej káblami. Káble by sme
+mohli prirovnať k nervom a žilám v človeku. EV3-kocka je zároveň aj srdcom --
+v zadnej časti obsahuje batérie, bez ktorých by mozog ani nohy (motory)
+nemohli fungovať. Návod ako robota postaviť nájdete <a href="https://education.lego.com/v3/assets/blt293eea581807678a/bltc8481dd2666822ff/5f8801e3f4f4cf0fa39d2fef/ev3-rem-driving-base.pdf">tu</a>.</p>
+<p><img alt="robot" src="../img/L4_robot.png" /></p>
+<h2 id="priprava-ev3-kocky">Príprava EV3-kocky</h2>
+<p>Programy budeme stále písať na počítači a potom ich cez USB kábel nahráme do
+kocky. Aby EV3-kocka vedela spustiť Python, musíme jej trochu pomôcť. Na micro
+SD kartu nahráme špeciálny operačný systém <a href="https://www.ev3dev.org/">ev3dev</a>.
+Keď bude SD karta v EV3-kocke a zapneme ju, spustí sa <code>ev3dev</code>. Ak sa chceme
+dostať do pôvodného režimu, jednoducho vypneme kocku, vytiahneme SD kartu
+a znovu spustíme robota.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Návod na prípravu SD karty nájdete na
+<a href="https://www.ev3dev.org/docs/getting-started/">stránkach ev3dev</a>,
+kroky 1, 2 a 4.</p>
+</div>
+<h2 id="priprava-pocitacu">Príprava počítaču</h2>
+<p>Keďže EV3-kocka je omnoho jednoduchšie zariadenie než bežný počítač, nebudeme
+na nej spúšťať skutočný Python, ale jeho jednoduchšiu verziu:
+<a href="https://micropython.org/">MicroPython</a> špeciálne upravený pre LEGO, nazýva sa
+<a href="https://pybricks.com/">Pybricks</a>. Tak budeme môcť z Pythonu spúšťať LEGO
+motory, vykreslovať obrázky na displeji, či načítavať dáta z rôznych senzorov.
+Aby sme tieto programy vedeli spustiť na EV3-kocke, potrebujeme vykonať ešte
+niekoľko vecí:</p>
+<ol>
+<li>Nainštalovať si <a href="https://code.visualstudio.com/Download">Visual Studio Code</a></li>
+<li>Spustiť ho</li>
+<li>Otvoriť <em>extension tab</em>
+   <img alt="extension tab" src="../img/L4_extensions.png" /></li>
+<li>Vyhľadať rozšírenie <em>EV3 MicroPython</em> a nainštalovať ho
+   <img alt="extension install" src="../img/L4_extension_install.png" /></li>
+</ol>
+<p>Tak a máme všetko pripravené :)</p>
+<h2 id="vpred">Vpred!</h2>
+<p>Teraz si napíšeme prvý jednoduchý program, ktorý pohne robota o kúsok vpred.</p>
+<ol>
+<li>Vo <em>Visual Studio Code</em> si vytvoríme nový projekt.
+   <img alt="nový projekt" src="../img/L4_new_project.png" /></li>
+<li>Zadáme názov, napr. "2motors", a stlačíme <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</li>
+<li>Otvorí sa nám prehliadač súborov. Tu zvolíme priečinok, kde chceme náš
+   projekt mať uložený.</li>
+<li>Dostaneme bezpečnostné upozornenie, či veríme autorom súborov vo zvolenom
+   priečinku. Za predpokladu, že všetky budeme písať my, potvrdíme, že áno</li>
+<li>Vo zvolenom priečinku sa nám vytvoril nový projektový priečinok s názvom
+   aký sme zvolili v kroku 2 ("2motors"). Ten obsahuje súbor <code>main.py</code> s kódom, ktorý sa
+   bude na robotovi spúšťať.
+   <img alt="main_py" src="../img/L4_open_main_py.png" /></li>
+<li>Vymažme počiatočný vygenerovaný kód v <code>main.py</code>
+   a skopírujme doň tento:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="ch">#!/usr/bin/env pybricks-micropython</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="kn">import</span> <span class="n">Motor</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="kn">import</span> <span class="n">Port</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="kn">import</span> <span class="n">wait</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">left_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">B</span> <span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">right_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">C</span> <span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">left_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="mi">360</span> <span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">right_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="mi">360</span> <span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">wait</span><span class="p">(</span> <span class="mi">2000</span> <span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">left_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">right_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+   Vyzerá trochu inak ako tie, čo sme písali doteraz. Zatiaľ sa tým netrápme,
+   onedlho si všetko rýchlo vysvetlíme.</li>
+<li>Teraz zapneme EV3-kocku (s SD kartou s nahratým <code>ev3dev</code>), prípojíme ju USB
+   káblom k počítaču a pripojíme sa ku nej z <em>Visual Studio Code</em>.
+   <img alt="connect" src="../img/L4_connect.png" /></li>
+<li>Zvolíme našu EV3-kocku.
+   <img alt="connect2" src="../img/L4_connect_my.png" /></li>
+<li>Vľavo dole by sme mali vidieť najprv žltý krúžok (EV3-kocka sa pripája),
+   potom zelený, indikujúci úspešné pripojenie. Ak je červený, spojenie zlyhalo.
+   Klik pravým -&gt; "Reconnect" pre nový pokus.
+   <img alt="status" src="../img/L4_status.png" />
+   Ak sa pripojiť nedarí a používate Ubuntu, môže pomôcť nastaviť
+   "IPv4 Method" na "Shared to other computers" vrámci nastavení siete
+   "USB Ethernet".</li>
+<li>Teraz nahráme program do EV3-kocky pomocou tlačidla vpravo od
+    "EV3DEV DEVICE BROWSER" (vľavo dole).
+   <img alt="nahrať program" src="../img/L4_download.png" /></li>
+<li>Aby sme program spustili, musíme ho nájsť an EV3-kocke. Zvolíme (stredným
+    tlačidlom) <code>File Browser</code> -&gt; <code>2motors</code> -&gt; <code>main.py</code>.
+   <img alt="file browser" src="../img/L4_file_browser.png" /></li>
+<li>Po spustení sa motory na 2 sekundy rozbehnú a potom zastavia. To je všetko,
+    čo náš program teraz robí. Celý tento postup nahrania kódu do EV3-kocky
+    a spustenie ho sa dá spraviť naraz pomocou klávesu <span class="keys"><kbd class="key-f5">F5</kbd></span>, skúste si to.</li>
+</ol>
+<h2 id="vysvetlenie-kodu">Vysvetlenie kódu</h2>
+<p>Prejdime si teraz náš program postupne, riadok po riadku:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="ch">#!/usr/bin/env pybricks-micropython</span>
+</code></pre></div></td></tr></table></div>
+<p>Toto je špeciálny riadok, ktorý hovorí, ako (akým <em>interpretrom</em>) spustiť
+napísaný kód. Nechceme ho spustiť ako klasický Python, ktorý sme používali
+doteraz. Tento riadok tiež budeme písať v každom našom ďalšom programe pre
+robota. Vždy musí byť hneď na začiatku súboru.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="kn">import</span> <span class="n">Motor</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="kn">import</span> <span class="n">Port</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="kn">import</span> <span class="n">wait</span>
+</code></pre></div></td></tr></table></div>
+<p>Zatiaľ sme používali len bežné funkcie Pythonu, napr. sme ho používali ako
+jednoduchú kalkulačku, používali sme <code class="highlight"><span class="nb">print</span></code> či <code class="highlight"><span class="nb">list</span></code>. Ale existuje
+veľmi veľa rôznych funkcií, ktoré sa v Pythone dajú využiť. Aby v nich bol
+aspoň trochu poriadok, delia sa na <em>balíčky</em> (<em>package</em>) a <em>moduly</em> (<em>module</em>).
+Väčšinu z nich je treba doinštalovať, my si vystačíme s tými, ktoré sú vstavané
+v <code>Pybricks</code>. Balíček <code>pybricks</code> obsahuje všetko potrebné na riadenie EV3-kocky,
+motorov, komunikáciu so senzormi. Tento balíček obsahuje niekoľko modulov.
+Napr. <code>ev3devides</code>, <code>parameters</code>, <code>tools</code>. No a tieto moduly zase
+obsahujú funkcie a triedy (o triedach si povieme niečo viac o chvíľu) -- ak ich
+chceme v našom kóde využiť, musíme si ich <em>naimportovať</em>:
+<code class="highlight"><span class="kn">from</span> <span class="nn">package.module</span> <span class="kn">import</span> <span class="n">function</span></code>. A to presne sa deje na týchto 4
+riadkoch. Naimportujeme si triedy <code>Motor</code>, <code>Port</code> a funkciu <code>wait</code>,
+ktoré budeme ďalej používať. Bez tohto <code class="highlight"><span class="kn">import</span></code> by sme dostali chybovú
+hlášku ak by sme sa ich pokúsili použiť.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-8">8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">left_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">B</span> <span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">right_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">C</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Ty sme využili naimportovanú <em>triedu</em> (<em>class</em>) <code>Motor</code>. Trieda slúži ako
+továreň na <em>objekty</em> (<em>object</em>). Takýto objekt v počítači často reprezentuje 
+nejaký objekt v reálnom svete. Teraz je to jednoduché. <code>Motor</code> vytvorí
+v pamäti EV3 objekt, pomocou ktorého budeme ovládať skutočný motor pripojený
+káblom na EV3-kocku. Aby sa nám tento objekt v pamäti nestratil, pomenujeme
+si ho. Ale náš robot má dva motory, jeden pripojený k portu <code>B</code>, druhý k portu
+<code>C</code>. Musíme továrni povedať: "Teraz mi vyrob motor (objekt triedy Motor), ktorý
+je pripojený na porte B. Teraz zase chcem motor pripojený na C-čko." Podobne
+ako sme dávali argumenty do funkcií (napr. <code class="highlight"><span class="s2">&quot;ahoj&quot;</span></code> je argumentom
+v <code class="highlight"><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;ahoj&quot;</span> <span class="p">)</span></code>), argumenty dávame aj keď vytvárame objekty pomocou
+tried. <code>Port.B</code> je spôsob ako povedať, že motor je pripojený k portu <code>B</code>.</p>
+<p>Takže po vykonaní týchto dvoch riadkov, v pamäti EV3 sú dva motory, jeden
+pomenovaný <code>left_motor</code>, pripojený na port <code>B</code>, a druhý, <code>right_motor</code>,
+pripojený na port <code>C</code>.</p>
+<details class="note">
+<summary>Poznámka k triedam</summary>
+<p>Ak si pamätáte, slovíčko "class" sme už niekde videli.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="s2">&quot;hello&quot;</span> <span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">list</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+Vlastne všetko je v Pythone objekt. <code>"hello"</code> povie továrni triedy <code>str</code>
+aby vytvorila objekt -- text "hello". <code>1</code> vytvorí tiež objekt -- číslo 1.
+A rovnako pre <code>list</code> aj, v podstate, všetko ostatné :)</p>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="n">left_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="mi">360</span> <span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="n">right_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="mi">360</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Keď chceme k vytvoreným objektom pristupovať, použijeme bodku <code>.</code>. Ako sme
+zvykli zavolať <em>funkciu</em> (<code class="highlight"><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;hello&quot;</span> <span class="p">)</span></code>), tak zavoláme aj funkciu
+priradenú k objektu, tzv. <em>metódu</em> (<em>method</em>): <code>objekt.metóda(argumenty)</code>.
+Funkcia <code class="highlight"><span class="nb">print</span></code> jednoducho vypíše daný text na obrazovku. Ale <code>run</code>
+potrebuje vedieť, aký motor má spustiť, preto je priradená k objektu, a teda
+nie je len <em>funkciou</em>, ale <em>metódou</em>.</p>
+<p>Parameter metódy <code>run</code> je rýchlosť, akou motor bude spustený, v stupňoch za
+sekundu. Keďže kruh má 360 stupňov, je to rýchlosť 1 RPM (<em>rotates per minute</em>),
+1 otočenie kolesa za sekundu. Ak by sme použili zápornú hodnotu, motor by sa
+otáčal do druhej strany.</p>
+<p>Tieto dva príkazy teda spustia oba motory rovnakou rýchlosťou. A budú bežať
+až pokým ich znovu nevypneme.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="n">wait</span><span class="p">(</span> <span class="mi">2000</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Funkcia <code>wait</code> jednoducho zastaví vykonávanie programu na daný počet milisekúnd.
+Takže vykonávanie počká na tomto riadku 2 sekundy (1 sekunda má 1000
+milisekúnd). Počas tejto doby sa nič nové nedeje, motory sú stále zapnuté.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="n">left_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="n">right_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Po ubehnutí 2 sekúnd oba motory vypneme metódou <code>stop</code>, ktorá neberie žiadne
+argumenty. Takže kolesá by sa mali otočiť (približne) o dve celé otáčky --
+skontrolujte to :)</p>
+<details class="question úloha" open="open">
+<summary>Question</summary>
+<p>Vyskúšajte si program rôzne upravovať.</p>
+<ol>
+<li>Vyskúšajte ako rýchlo dokáže robot ísť.</li>
+<li>Naprogramujte ho tak, aby šiel dozadu, nie dopredu.</li>
+<li>Čo sa stane, ak spustíte len jeden motor, zatiaľ čo druhý bude stáť?</li>
+<li>Ako otočiť robota na mieste?</li>
+<li>Zamyslite sa, akú rýchlosť treba nastaviť motorom, aby sa robot pohyboval
+   do kruhu.</li>
+</ol>
+</details>
+<div class="admonition example príklad">
+<p class="admonition-title">Example</p>
+<p>Teraz si ukážeme zaujímavejší pohyb -- do špirály. Začneme v strede a
+postupne budeme robiť akoby väčší a väčší kruh. Už vieme, že na pohyb
+do kruhu je potrebné jednému motoru udeliť väčšiu rýchlosť než druhému.
+A čím je tento rozdiel rýchlostí menší, tým je kruh väčší. Až pokým nebude
+rozdiel nulový, vtedy pôjde robot rovno.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="ch">#!/usr/bin/env pybricks-micropython</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="kn">import</span> <span class="n">Motor</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="kn">import</span> <span class="n">Port</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="kn">import</span> <span class="n">wait</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">left_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">B</span> <span class="p">)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">right_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">C</span> <span class="p">)</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="n">left_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="mi">360</span> <span class="p">)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="k">for</span> <span class="n">right_speed</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">359</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="p">):</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>    <span class="n">right_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="n">right_speed</span> <span class="p">)</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>    <span class="n">wait</span><span class="p">(</span> <span class="mi">20</span> <span class="p">)</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="n">wait</span><span class="p">(</span> <span class="mi">1000</span> <span class="p">)</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="n">left_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="n">right_motor</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Na postupné znižovanie rýchlosti motoru <code>C</code> sme použili nám už známu
+konštrukciu <code class="highlight"><span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">)</span></code>. <code class="highlight"><span class="nb">range</span></code> generuje čísla
+od prvého vrátane, po posledné, ale zastaví sa jeden krok pred ním, preto
+sme použili <code>359</code>, aby na konci bola rýchlosť o jedna väčšia, teda <code>360</code>,
+a robot šiel rovno.</p>
+</div>
+<p>Na dnes toho bolo už dosť, nabudúce si ukážeme jeden spôsob ako púšťať motory
+o niečo presnejšie, a tiež použijeme prvý krát senzor! Bude to tlačidlový
+senzor, ktorým môžeme napr. odštartovať rôzne akcie robota alebo detekovať
+zrážku s iným predmetom.</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../03/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python: funkcie, range, vlastná hra" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Python: funkcie, range, vlastná hra
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
