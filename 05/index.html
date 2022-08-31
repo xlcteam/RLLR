@@ -299,6 +299,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ako-pracovat-s-dotykovym-senzorom-v-pythone" class="md-nav__link">
+    Ako pracovať s dotykovým senzorom v Pythone
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -343,6 +350,13 @@
         <li class="md-nav__item">
   <a href="#dotykovy-senzor" class="md-nav__link">
     Dotykový senzor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ako-pracovat-s-dotykovym-senzorom-v-pythone" class="md-nav__link">
+    Ako pracovať s dotykovým senzorom v Pythone
   </a>
   
 </li>
@@ -539,6 +553,96 @@ a potom sa otočí o 90°. V kóde vidíme dve nové veci:</p>
 </ul>
 </details>
 <h2 id="dotykovy-senzor">Dotykový senzor</h2>
+<p>Na robota teraz pridáme dotykový senzor. Tak bude dostávať aj spätnú väzbu
+z okolia, čo je pre robotov veľmi dôležité. Podľa toho môže zmeniť správanie.
+Napr. pri narazení do steny dotykovým senzorom, robot náraz detekuje, otočí sa
+a bude hľadať cestu iným smerom. Návod je <a href="https://education.lego.com/v3/assets/blt293eea581807678a/blt95682a19090a6923/5f8801e2ad20281d51fbc1cc/ev3-touch-sensor-driving-base.pdf">tu</a>.</p>
+<p><img alt="robot" src="../img/L5_robot.png" /></p>
+<p>V návode ste si určite všimli, že kábel od dotykového senzoru je zapojený
+na druhej strane ako káble od motorov. Zariadenia, ktoré pripájame
+k EV3-kocke, môžeme rozdeliť na dva typy:</p>
+<ol>
+<li><em>vstupné</em> -- To sú senzory. Ich porty sú označené číslami 1 - 4. Senzory
+   snímajú rôzne hodnoty z okolia (napr. teplotu, vzdialenosť od objektu vpredu,
+   intenzitu svetla, dotyk, ...) a posielajú ich do EV3-kocky, ktorá následne
+   hodnoty spracuje a robot zmení podľa toho správanie. Je to našou úlohou,
+   programátorov, zvoliť tie správne reakcie na hodnoty z okolia.</li>
+<li><em>výstupné</em> -- Cez ne robot mení správanie. Napr. pohybom pomocou motorov.
+   Alebo začne blikať svetelnými diódami, vykreslí niečo na displeji, či vydá
+   zvuky, môže dokonca napodobniť ľudskú reč.</li>
+</ol>
+<h2 id="ako-pracovat-s-dotykovym-senzorom-v-pythone">Ako pracovať s dotykovým senzorom v Pythone</h2>
+<p>Balíček <code>pybricks</code> ponúka modul <code>ev3devices</code>, kde sa okrem triedy <code>Motor</code>
+nachádza aj trieda <code>TouchSensor</code>. Na jeho objektoch zavoláme metódu <code>pressed</code>,
+ktorá vráti hodnotu <code class="highlight"><span class="kc">True</span></code> alebo <code class="highlight"><span class="kc">False</span></code> podľa toho, či je spínač
+stlačený.</p>
+<div class="admonition example">
+<p class="admonition-title">Príklad</p>
+<p>Poďme si to vyskúšať na jednoduchom príklade. Stlačením senzoru budeme
+posúvať robota vpred, keď senzor stlačený nebude, robot zostane stáť.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">pybricks.ev3devices</span> <span class="kn">import</span> <span class="n">Motor</span><span class="p">,</span> <span class="n">TouchSensor</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">pybricks.parameters</span> <span class="kn">import</span> <span class="n">Port</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">from</span> <span class="nn">pybricks.tools</span> <span class="kn">import</span> <span class="n">wait</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">left_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">B</span> <span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">right_motor</span> <span class="o">=</span> <span class="n">Motor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">C</span> <span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="n">touch_sensor</span> <span class="o">=</span> <span class="n">TouchSensor</span><span class="p">(</span> <span class="n">Port</span><span class="o">.</span><span class="n">S1</span> <span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="k">def</span> <span class="nf">move</span><span class="p">(</span> <span class="n">speed</span> <span class="p">):</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>    <span class="n">left_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="n">speed</span> <span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="n">right_motor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span> <span class="n">speed</span> <span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>    <span class="k">if</span> <span class="n">touch_sensor</span><span class="o">.</span><span class="n">pressed</span><span class="p">():</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>        <span class="n">move</span><span class="p">(</span> <span class="mi">360</span> <span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>        <span class="n">move</span><span class="p">(</span> <span class="mi">0</span> <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><code class="highlight"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span></code> vytvorí nekonečný cyklus, v ktorom sa zakaždým spýtame
+dotykového senzoru, či je stlačený, a podľa toho určíme motorom rýchlosť.
+Tu je ďalší spôsob ako zastaviť motory -- nastaviť im rýchlosť na nulu.</p>
+</div>
+<details class="question" open="open">
+<summary>Úloha 1</summary>
+<p>Upravte program pohybu robota do štvorca tak, aby na začiatku robot stál
+na mieste a čakal na stlačenie tlačidla. Potom prejde štvorec, znovu čaká
+na mieste na stlačenie tlačidla, a tak stále dokola.</p>
+</details>
+<details class="question" open="open">
+<summary>Úloha 2</summary>
+<p>Napíšte program, kde robot pôjde pomaly rovno dopredu, pokým nenarazí
+do prekážky dotykovým senzorom. Vtedy zastane, trochu cúvne, otočí sa
+(približne) o 90° a pôjde znovu pred až pokým nenarazí opäť. Toto správanie
+sa bude opakovať donekonečna.</p>
+</details>
+<details class="question" open="open">
+<summary>Úloha 3</summary>
+<p>Teraz využijete program z predchádzajúcej úlohy, len sa zmení prostredie.
+Postavte robota na stôl a upravte ho tak, aby bol dotykový senzor otočený
+smerom k zemi a dotýkal sa jej tak, že je stlačený. Ak robot príde na okraj
+stola, namiesto narazenia do prekážky ako v minulej úlohe, dotykový senzor
+sa už nebude opierať o stôl a tlačidlo sa uvoľní. Vtedy robot vykoná rovnaký
+manéver ako v minulej úlohe. Budete teda potrebovať aj program mierne
+upraviť. Pri testovaní pozor! Nech robot nespadne zo stola, aj pri dobre
+napísanom programe sa to môže stať.
+trochu upraviť program.</p>
+</details>
 
 
 
