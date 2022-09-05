@@ -11,6 +11,7 @@ nav:
   - 03.md
   - 04.md
   - 05.md
+  - 06.md
 
 markdown_extensions:
   - pymdownx.highlight:
